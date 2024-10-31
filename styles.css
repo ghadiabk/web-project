@@ -1,0 +1,27 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e1cbd7;
+}
+#logo{
+    max-width: 150px;
+    max-height: 39px;
+}
+#menu, #cart{
+    max-width: 75px;
+    max-height: 75px;
+}
+#menu, #cart:hover{
+    cursor: pointer;
+}
+#cart{
+    margin-left: auto;
+    padding: 10px;
+}
