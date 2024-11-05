@@ -19,6 +19,7 @@ header{
 #hamMenu{
     background-color: #26425A;
     border: none;
+    display: none;
 }
 #menu, #cart{
    height:39px;
@@ -36,6 +37,14 @@ header{
 #cart{
     margin-left: auto;
     padding: 10px;
+}
+.menu-pc a{
+    color: #C38EB4;
+    text-decoration: none;
+    padding: 5px;
+}
+.menu-pc a:hover{
+    text-decoration: underline;
 }
 .sidebar {
     position: fixed;
@@ -67,6 +76,14 @@ header{
     height: 100%;
     display: none;
     z-index: 999;
+}
+@media screen and (max-width: 768px){
+    .menu-pc{
+        display: none;
+    }
+    #hamMenu{
+        display: block;
+    }
 }
 #test{
     height: 60vh;
