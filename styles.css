@@ -30,6 +30,7 @@ header{
    display: flex;
    justify-content: center;
    align-items: center;
+   color:#C38EB4;
 }
 #menu, #cart:hover{
     cursor: pointer;
@@ -38,8 +39,13 @@ header{
     margin-left: auto;
     padding: 10px;
 }
+.menu-pc{
+    margin-right: 20px;
+    display: flex;
+    gap:10px;
+}
 .menu-pc a{
-    color: #C38EB4;
+    color:#C38EB4;
     text-decoration: none;
     padding: 5px;
 }
@@ -94,6 +100,7 @@ section{
 }
 footer{
     display:flex;
+    flex-wrap: wrap;
     height:150px;
     justify-content: space-around;
     background-color: #26425A;
