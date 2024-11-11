@@ -97,6 +97,25 @@ Main{
     height: 60vh;
     margin-bottom: 175px;
     height: 100%;
+    background-color: #E1CBD7;
+}
+#filters{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #86A8CF;
+}
+.filter{
+    border: none;
+    width: 80px;
+    height: 40px;
+    margin: 10px;
+    background-color: #C38EB4;
+    color: #26425A;
+}
+.filter:hover{
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24);
+    background-color: #cf97bf;
 }
 #productContainer{
     display: flex;
@@ -115,13 +134,19 @@ Main{
 }
 #contactBtn{
     display: flex;
-    right: 0;
-    z-index: 1;
+    right: 10px;
+    bottom: 10px;
+    z-index: 200;
     position: fixed;
     border-radius: 50%;
     border: none;
     color: #26425A;
     background-color: #C38EB4;
+}
+#contactBtn:hover{
+    cursor: pointer;
+    background-color: #cf97bf;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 #contactBtn img{
     height: 50px;
