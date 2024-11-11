@@ -27,22 +27,74 @@
     </header>
     <Main>
         <div id="filters">
-            <button class="filter">Tops</button>
-            <button class="filter">Pants</button>
-            <button class="filter">Dresses</button>
-            <button class="filter">Shoes</button>
-            <button class="filter">Wish Listed</button>
+            <button class="filter" data-filter="*" onclick=filter(event)>All</button>
+            <button class="filter" data-filter="tops" onclick=filter(event)>Tops</button>
+            <button class="filter" data-filter="pants" onclick=filter(event)>Pants</button>
+            <button class="filter" data-filter="dresses" onclick=filter(event)>Dresses</button>
+            <button class="filter" data-filter="shoes" onclick=filter(event)>Shoes</button>
+            <button class="filter" data-filter="shorts" onclick=filter(event)>Shorts</button>
+            <button class="filter" data-filter="bags" onclick=filter(event)>Bags</button>
+            <button class="filter" data-filter="female" onclick=filter(event)>Female</button>
+            <button class="filter" data-filter="male" onclick=filter(event)>Male</button>
+            <button class="filter" data-filter="wishlist" onclick=filter(event)>WishListed</button>
         </div>
-        <div id="productContainer">
-            <div class="productBox tops"><img src="imgs/White Top.png" alt=""></div>
-            <div class="productBox tops"><img src="imgs/White Top with Red.png" alt=""></div>
-            <div class="productBox pants"><img src="imgs/Star Denim Jeans.png" alt=""></div>
-            <div class="productBox dresses"><img src="imgs/Off White Dress.png" alt=""></div>
-            <div class="productBox shoes"><img src="imgs/Beige Boots.png" alt=""></div>
-            <div class="productBox shoes"><img src="imgs/Black MaryJanes.png" alt=""></div>
-            <div class="productBox"><img src="imgs/" alt=""></div>
-            <div class="productBox"><img src="imgs/" alt=""></div>
-            <div class="productBox"><img src="imgs/" alt=""></div>
+        <div class="productContainer">
+            <div class="productBox tops female">
+                <img src="imgs/White Top.png" alt="">
+                <span>price:20$</span>
+            </div>
+            <div class="productBox tops female">
+                <img src="imgs/White Top with Red.png" alt="">
+                <span>price:20$</span>
+            </div>
+            <div class="productBox pants female">
+                <img src="imgs/Star Denim Jeans.png" alt="">
+                <span>price:40$</span>
+            </div>
+            <div class="productBox dresses female">
+                <img src="imgs/Off White Dress.png" alt="">
+                <span>price:50$</span>
+            </div>
+            <div class="productBox shoes female">
+                <img src="imgs/Beige Boots.png" alt="">
+                <span>price:45$</span>
+            </div>
+            <div class="productBox shoes female">
+                <img src="imgs/Black MaryJanes.png" alt="">
+                <span>price:40$</span>
+            </div>
+            <div class="productBox shoes male">
+                <img src="imgs/Black shoes.png" alt="">
+                <span>price:40$</span>
+            </div>
+            <div class="productBox pants male">
+                <img src="imgs/Brown Cargo Pants.png" alt="">
+                <span>price:35$</span>
+            </div>
+            <div class="productBox tops male">
+                <img src="imgs/Grey Sweater.png" alt="">
+                <span>price:25$</span>
+            </div>
+            <div class="productBox pants male">
+                <img src="imgs/Male Denim Jeans.png" alt="">
+                <span>price:40$</span>
+            </div>
+            <div class="productBox tops male">
+                <img src="imgs/White Shirt.png" alt="">
+                <span>price:25$</span>
+            </div>
+            <div class="productBox shoes male">
+                <img src="imgs/White_shoes.png" alt="">
+                <span>price:40$</span>
+            </div>
+            <div class="productBox shorts male">
+                <img src="imgs/white_shorts.png" alt="">
+                <span>price:20$</span>
+            </div>
+            <div class="productBox bags">
+                <img src="imgs/Minimalist Baguette Bag.png" alt="">
+                <span>price:35$</span>
+            </div>
         </div>
         <div id="contactBtn"><img src="imgs/Contact Us btn.png" alt=""></div>
     </Main>

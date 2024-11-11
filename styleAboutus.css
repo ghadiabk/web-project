@@ -68,6 +68,7 @@ header{
     background-color: #C38EB4;
     padding-top: 60px;
     transition: 0.3s;
+    z-index: 1000;
 }
 .sidebar a {
     padding: 10px 20px;

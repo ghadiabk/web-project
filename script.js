@@ -14,3 +14,16 @@ function closeSidebar() {
     sidebar.style.right = "-250px";
     overlay.style.display = "none";
 }
+function filter(e) {
+  let products = document.querySelectorAll(".productContainer div");
+  let filter = e.target.dataset.filter;
+  if (filter === '*') {
+    products.forEach(product => product.classList.remove('hidden'));
+  }  else {
+    products.forEach(product => {
+      product.classList.contains(filter) ? 
+      product.classList.remove('hidden') : 
+      product.classList.add('hidden');
+    });
+  };
+};
