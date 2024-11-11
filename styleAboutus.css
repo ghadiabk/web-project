@@ -2,6 +2,9 @@
     padding: 0px;
     margin: 0px;
 }
+body{
+    background-color: #1d3041;
+}
 header{
     display: flex;
     width: 100%;
@@ -23,6 +26,7 @@ header{
     border: none;
     display: none;
 }
+
 #menu, #cart{
    height:39px;
    width:39px;
@@ -92,49 +96,79 @@ header{
     #hamMenu{
         display: block;
     }
+    #aboutUsContainer{
+       flex-direction: column;
+    }
+
 }
-Main{
-    height: 60vh;
-    margin-bottom: 175px;
-    height: 100%;
+#backgroundLayer{
+    background-color: #26425A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    margin-top: 20px;
+    width:100%;
+    height:30vh;
+    border:2px solid #C38EB4;
 }
-#productContainer{
+#backgroundLayer p{
+    margin-top: 15px;
+    text-align: center;
+}
+#backgroundLayer p,h1{
+    color:#E1CBD7;
+}
+#introduction{
+    padding:20px;
     display: flex;
     flex-wrap: wrap;
-}
-.productBox{
-    margin: 10px;
-    height: 250px;
-    width: 197px;
-    background-color: #E1CBD7;
-}
-.productBox img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-#contactBtn{
-    display: flex;
-    right: 0;
-    z-index: 1;
-    position: fixed;
-    border-radius: 50%;
-    border: none;
-    color: #26425A;
-    background-color: #C38EB4;
-}
-#contactBtn img{
-    height: 50px;
-    width: 50px;
-}
-section{
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
     width:100%;
-    height:350px;
+    height:auto;
+    gap:10px;
+}
+#introduction p,h3{
+    color:#E1CBD7;
+    text-align: center;
+}
+#aboutUsContainer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap:10px;
+    width:100%;
+    height:200px;
+}
+.AboutUsContainerCLASS{
+    padding:20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    width:100%;
+    height:auto;
+    gap:10px;
+}
+.AboutUsContainerCLASS p,h3{
+    color:#E1CBD7;
+    text-align: center;
+}
+.line_2{
+    display:block;
+    height:4px;
+    width:150px;
+    background-color: #C38EB4;
+    border-radius: 20px;
 }
 footer{
     display:flex;
     flex-wrap: wrap;
-    height:150px;
+    height:10vh;
     justify-content: space-around;
     background-color: #26425A;
     color:#E1CBD7;
@@ -144,7 +178,7 @@ footer{
     position: relative;
 }
 .container{
-    width:300px;
+    width:30vw;
     height:100%;
     display:flex;
     margin-top: 10px;
@@ -198,13 +232,6 @@ footer{
    gap:70px;
    height:100%;
 }
-.line{
-    display:block;
-    height:4px;
-    width:90px;
-    background-color: #C38EB4;
-    border-radius: 20px;
-}
 .footerinfo{
     height:100%;
     width:100px;
@@ -222,3 +249,4 @@ footer{
     text-decoration: underline;
     cursor: pointer;
 }
+
