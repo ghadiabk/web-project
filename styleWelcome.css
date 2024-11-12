@@ -1,10 +1,10 @@
 *{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+    padding:0px;
+    margin:0px;
 }
 body{
-    background-color: #1d3041;
+    font-family: 'Poppins';
+    background-color: #26425A;
 }
 header{
     display: flex;
@@ -17,10 +17,12 @@ header{
     color:#E1CBD7;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 #logo{
     max-width: 150px;
     max-height: 39px;
+    /* margin-left: 30px; */
 }
 #hamMenu{
     background-color: #26425A;
@@ -49,14 +51,13 @@ header{
     margin-right: 20px;
     display: flex;
     gap:10px;
-    font-family: 'Poppins';
-    font-size: small;
-   
 }
 .menu-pc a{
     color:#C38EB4;
     text-decoration: none;
     padding: 5px;
+    font-family: 'Poppins';
+    font-size: small;
 }
 .menu-pc a:hover{
     text-decoration: underline;
@@ -81,6 +82,7 @@ header{
     display: block;
     font-size: large;
     font-weight: bold;
+    font-family: 'Poppins';
 }
 .sidebar a:hover{
     cursor: pointer;
@@ -101,90 +103,68 @@ header{
     #hamMenu{
         display: block;
     }
-    #aboutUsContainer{
-       flex-direction: column;
-    }
 }
-main{
-    min-height: 87vh;
-    margin-bottom: 175px;
-}
-#backgroundLayer{
-    background-color: #26425A;
+#welcome{
+    height:300px;
+    width:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding-top: 30px;
+    padding-top: 40px;
     margin-top: 20px;
-    width:100%;
-    min-height:30vh;
-    border:2px solid #C38EB4;
+    border: 2px solid #E1CBD7;
+    
 }
-#backgroundLayer p{
-    text-align: center;
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-#backgroundLayer p,h1{
-    color:#E1CBD7;
-    width: 100%;
-}
-#backgroundLayer h1{
-    margin-bottom: 30px;
-}
-#introduction{
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-top: 20px;
-    align-items: center;
-    width:100%;
+#welcomeContainer{
+    padding:10px;
     height:auto;
-    gap: 10px;
-}
-#introduction p,h3{
-    color:#E1CBD7;
+    width:auto;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    width: 60%;
+    gap:5px;
 }
-#aboutUsContainer{
-    margin-top: 20px;
+#welcomeContainer h1{
+    font-size:10vh;
+    color:#C38EB4;
+}
+#welcomeContainer p{
+    color:#C38EB4;
+}
+#welcomeContainer span{
+    color:#E1CBD7;
+    font-weight: bolder;
+}
+#welcomeBtns{
+    width:200px;
+    height:100px;
     display: flex;
     justify-content: space-around;
-    gap:10px;
-    width:100%;
-    height:200px;
-}
-.AboutUsContainerCLASS{
+    gap:20px;
     padding:20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20px;
-    align-items: center;
-    width:100%;
-    height:auto;
-    gap:10px;
 }
-.AboutUsContainerCLASS p,h3{
-    color:#E1CBD7;
-    text-align: center;
+#welcomeBtns button{
+margin-top: 20px;
+width:200px;
+height:40px;
+border-radius: 10px;
+border: 2px solid #C38EB4;
+background-color: #26425A;
+color:#E1CBD7;
+transition: 0.3s;
 }
-.line_2{
-    display:block;
-    height:4px;
-    width:150px;
+#welcomeBtns button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
     background-color: #C38EB4;
-    border-radius: 20px;
+    color:#26425A;
+
 }
 footer{
-    margin-top: 10px;
+    margin-top: 30px;
     display:flex;
     flex-wrap: wrap;
-    height:150px;
+    height:5vh;
     justify-content: space-around;
     background-color: #26425A;
     color:#E1CBD7;
@@ -192,6 +172,7 @@ footer{
     bottom: 0;
     height: 175px;
     position: relative;
+    font-family: 'Times New Roman', Times, serif;
 }
 .container{
     width:300px;
@@ -205,10 +186,6 @@ footer{
     align-items: center;
     gap:15px;
     height: 100%;
-}
-#logofooter img{
-    height:50px;
-    width:200px;
 }
 .icons{
     display: flex;
@@ -238,36 +215,5 @@ footer{
     color:#86A8CF;
     padding:4px;
     transform: scale(1.4);
-    cursor: pointer;
-}
-#container2{
-   display: flex;
-   justify-content: space-between;
-   justify-content: center;
-   gap:70px;
-   height:100%;
-}
-.line{
-    display:block;
-    height:4px;
-    width:90px;
-    background-color: #C38EB4;
-    border-radius: 20px;
-}
-.footerinfo{
-    height:100%;
-    width:100px;
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-}
-.footerinfo a{
-    color:#E1CBD7;
-    text-decoration: none;
-    transition: 0.3s;
-}
-.footerinfo a:hover{
-    color:#86A8CF;
-    text-decoration: underline;
     cursor: pointer;
 }
