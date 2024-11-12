@@ -160,6 +160,7 @@ main{
 }
 .productBox:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 .wishlistContainer button{
     width:20px;

@@ -22,7 +22,6 @@ header{
 #logo{
     max-width: 150px;
     max-height: 39px;
-    /* margin-left: 30px; */
 }
 #hamMenu{
     background-color: #26425A;
@@ -106,14 +105,13 @@ header{
 }
 #welcome{
     height:300px;
-    width:100%;
+    width:99.8%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 40px;
     margin-top: 20px;
     border: 2px solid #E1CBD7;
-    
 }
 #welcomeContainer{
     padding:10px;
@@ -161,17 +159,16 @@ transition: 0.3s;
 
 }
 footer{
-    margin-top: 30px;
+    margin-top: 130px;
     display:flex;
     flex-wrap: wrap;
-    height:5vh;
     justify-content: space-around;
-    background-color: #26425A;
+    background-color: #9f67a8;
     color:#E1CBD7;
     width: 100%;
     bottom: 0;
-    height: 175px;
-    position: relative;
+    height: 100px;
+    position: fixed;
     font-family: 'Times New Roman', Times, serif;
 }
 .container{
