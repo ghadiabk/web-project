@@ -1,12 +1,11 @@
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 body{
     background-color: #1d3041;
-   
 }
-
 header{
     display: flex;
     width: 100%;
@@ -18,6 +17,7 @@ header{
     color:#E1CBD7;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 #logo{
     max-width: 150px;
@@ -103,9 +103,10 @@ header{
         display: block;
     }
 }
-Main{
+main{
     min-height: 87vh;
     background-color: #1d3041;
+    padding-bottom: 200px;
 }
 #filters{
     margin-top: 20px;
@@ -139,7 +140,6 @@ Main{
     flex-wrap: wrap;
     background-color: #1d3041;
     justify-content: space-around;
-    position:relative;
 }
 .productBox{
     margin: 10px;
@@ -157,7 +157,6 @@ Main{
     width: 100%;
     height: 80%;
     object-fit: contain;
-
 }
 .productBox:hover{
     transform: scale(1.1);
@@ -165,7 +164,6 @@ Main{
 .wishlistContainer button{
     width:20px;
     height:20px;
-
 }
 .productBox .productName{
     color:#1d3041;
@@ -255,7 +253,6 @@ footer{
     transform: scale(1.4);
     cursor: pointer;
 }
-
 #container2{
    display: flex;
    justify-content: space-between;

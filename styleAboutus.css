@@ -1,6 +1,7 @@
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 body{
     background-color: #1d3041;
@@ -26,7 +27,6 @@ header{
     border: none;
     display: none;
 }
-
 #menu, #cart{
    height:39px;
    width:39px;
@@ -49,6 +49,8 @@ header{
     margin-right: 20px;
     display: flex;
     gap:10px;
+    font-family: 'Poppins';
+    font-size: small;
 }
 .menu-pc a{
     color:#C38EB4;
@@ -57,6 +59,7 @@ header{
 }
 .menu-pc a:hover{
     text-decoration: underline;
+    color: #86A8CF;
 }
 .sidebar {
     position: fixed;
@@ -100,29 +103,38 @@ header{
     #aboutUsContainer{
        flex-direction: column;
     }
-
+}
+main{
+    min-height: 87vh;
+    margin-bottom: 175px;
 }
 #backgroundLayer{
     background-color: #26425A;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    text-align: center;
     padding-top: 30px;
     margin-top: 20px;
     width:100%;
-    height:30vh;
+    min-height:30vh;
     border:2px solid #C38EB4;
 }
 #backgroundLayer p{
-    margin-top: 15px;
     text-align: center;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 #backgroundLayer p,h1{
     color:#E1CBD7;
+    width: 100%;
+}
+#backgroundLayer h1{
+    margin-bottom: 30px;
 }
 #introduction{
-    padding:20px;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -130,11 +142,12 @@ header{
     align-items: center;
     width:100%;
     height:auto;
-    gap:10px;
+    gap: 10px;
 }
 #introduction p,h3{
     color:#E1CBD7;
     text-align: center;
+    width: 60%;
 }
 #aboutUsContainer{
     margin-top: 20px;
@@ -147,7 +160,7 @@ header{
 .AboutUsContainerCLASS{
     padding:20px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: column;
     margin-top: 20px;
     align-items: center;
@@ -167,9 +180,10 @@ header{
     border-radius: 20px;
 }
 footer{
+    margin-top: 10px;
     display:flex;
     flex-wrap: wrap;
-    height:10vh;
+    height:150px;
     justify-content: space-around;
     background-color: #26425A;
     color:#E1CBD7;
@@ -179,7 +193,7 @@ footer{
     position: relative;
 }
 .container{
-    width:30vw;
+    width:300px;
     height:100%;
     display:flex;
     margin-top: 10px;
@@ -225,13 +239,19 @@ footer{
     transform: scale(1.4);
     cursor: pointer;
 }
-
 #container2{
    display: flex;
    justify-content: space-between;
    justify-content: center;
    gap:70px;
    height:100%;
+}
+.line{
+    display:block;
+    height:4px;
+    width:90px;
+    background-color: #C38EB4;
+    border-radius: 20px;
 }
 .footerinfo{
     height:100%;
@@ -250,4 +270,3 @@ footer{
     text-decoration: underline;
     cursor: pointer;
 }
-
