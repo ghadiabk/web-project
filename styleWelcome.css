@@ -1,6 +1,7 @@
 *{
     padding:0px;
     margin:0px;
+    box-sizing: border-box;
 }
 body{
     font-family: 'Poppins';
@@ -20,13 +21,14 @@ header{
     z-index: 1;
 }
 #logo{
-    max-width: 150px;
-    max-height: 39px;
+    max-width: 200px;
+    max-height: 60px;
 }
 #hamMenu{
     background-color: #26425A;
     border: none;
     display: none;
+    margin-left: auto;
 }
 #menu, #cart{
    height:39px;
@@ -43,13 +45,15 @@ header{
     cursor: pointer;
 }
 #cart{
-    margin-left: auto;
+    margin-left: 10px;
     padding: 10px;
 }
 .menu-pc{
-    margin-right: 20px;
+    margin-left: auto;
     display: flex;
     gap:10px;
+    font-family: 'Poppins';
+    font-size: medium;
 }
 .menu-pc a{
     color:#C38EB4;
@@ -105,7 +109,7 @@ header{
 }
 #welcome{
     height:300px;
-    width:99.8%;
+    width:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,20 +160,18 @@ transition: 0.3s;
     transform: scale(1.1);
     background-color: #C38EB4;
     color:#26425A;
-
 }
 footer{
-    margin-top: 130px;
+    margin-top: 10px;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #9f67a8;
+    background-color: #26425A;
     color:#E1CBD7;
     width: 100%;
     bottom: 0;
-    height: 100px;
-    position: fixed;
-    font-family: 'Times New Roman', Times, serif;
+    min-height: 175px;
+    position: relative;
 }
 .container{
     width:300px;
@@ -183,6 +185,10 @@ footer{
     align-items: center;
     gap:15px;
     height: 100%;
+}
+#logofooter img{
+    height:50px;
+    width:200px;
 }
 .icons{
     display: flex;
@@ -212,5 +218,36 @@ footer{
     color:#86A8CF;
     padding:4px;
     transform: scale(1.4);
+    cursor: pointer;
+}
+#container2{
+   display: flex;
+   justify-content: space-between;
+   justify-content: center;
+   gap:70px;
+   height:100%;
+}
+.line{
+    display:block;
+    height:4px;
+    width:90px;
+    background-color: #C38EB4;
+    border-radius: 20px;
+}
+.footerinfo{
+    height:100%;
+    width:100px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.footerinfo a{
+    color:#E1CBD7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footerinfo a:hover{
+    color:#86A8CF;
+    text-decoration: underline;
     cursor: pointer;
 }

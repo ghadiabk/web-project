@@ -3,7 +3,7 @@ let learnbtn=document.getElementById("learnbtn");
 
 
 function toProductPage(){
-    window.location.href="index.html";
+    window.location.href="shop.html";
 }
 shopbtn.addEventListener("click",function(){
     toProductPage();
