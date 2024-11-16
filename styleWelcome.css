@@ -4,9 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Poppins';
-    background-color: #26425A;
+    background-color: #1d3041;
 }
+
+
 header{
     display: flex;
     width: 100%;
@@ -107,70 +108,182 @@ header{
         display: block;
     }
 }
-#welcome{
-    height:300px;
+#welcomeHero{
+    margin-top: 50px;
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: space-around;
     width:100%;
+    height:auto;
+    /* border-bottom: 1px solid #E1CBD7; */
+}
+#hero-headers{
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    gap:20px;
+    height:40vh;
+    width: 100vh;
+    color:#E1CBD7
+}
+#hero-headers h1{
+    color:#C38EB4;
+    font-size:xx-large;
+}
+#hero-buttons{
+    display: flex;
+    width: 100vw;
+    height:20vh;
+    gap:15px;
+    margin-top: 5px;
+}
+#hero-buttons button{
+    font-size:x-small;
+    width:70px;
+    height:40px;
+    padding:5px;
+    border: 2px solid #E1CBD7;
+    border-radius: 30px;
+    background-color: #1d3041;
+    color:#E1CBD7;
+    transition: 0.2s;
+}
+#hero-buttons button:hover{
+    transform: scale(1.1);
+    color:#1d3041;
+    background-color:#C38EB4;
+    border: none;
+    cursor: pointer;
+}
+#hero-img img{
+    margin-top: 15px;
+    height:40vh;
+    width:40vw;
+    border-radius: 15px;
+}
+.chroma{
+    font-family:'Poppins';
+    color:#C38EB4;
+    font-weight: 800;
+}
+#product-details{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;
-    margin-top: 20px;
-    border: 2px solid #E1CBD7;
+    width:100%;
+    height:400px;
+    gap:20px;
+    margin-top: 50px;
+    font-family: 'Poppins';
+    /* border-bottom: 1px solid #E1CBD7; */
 }
-#welcomeContainer{
-    padding:10px;
-    height:auto;
+#product-details h1{
+    color:#C38EB4;
+    font-size:xx-large;
+    font-family: 'Poppins';
+    
+}
+#product-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap:30px;
     width:auto;
+    height:auto;
+}
+.cards{
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    gap:5px;
+    align-items: center;
+    height:30vh;
+    width: 9vw;
+    background-color: #E1CBD7;
+    border-radius: 20px;
 }
-#welcomeContainer h1{
-    font-size:10vh;
-    color:#C38EB4;
-}
-#welcomeContainer p{
-    color:#C38EB4;
-}
-#welcomeContainer span{
-    color:#E1CBD7;
-    font-weight: bolder;
-}
-#welcomeBtns{
-    width:200px;
-    height:100px;
-    display: flex;
-    justify-content: space-around;
-    gap:20px;
-    padding:20px;
-}
-#welcomeBtns button{
-margin-top: 20px;
-width:200px;
-height:40px;
-border-radius: 10px;
-border: 2px solid #C38EB4;
-background-color: #26425A;
-color:#E1CBD7;
-transition: 0.3s;
-}
-#welcomeBtns button:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    background-color: #C38EB4;
+.cards-icons{
+    margin-top: 10px;
+    font-size: xxx-large;
     color:#26425A;
 }
+.cards p{
+    width:7vw;
+    height:10vh;
+    text-align: center;
+    color:#E1CBD7;
+    background-color: #26425A;
+    border-radius: 10px;
+    padding:5px;
+}
+#details-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    height:100%;
+    font-family: 'Poppins';
+    gap:10px;
+    margin-top: 50px;
+}
+#details-slider h1 {
+    color:#C38EB4;
+    font-size:xx-large;
+    font-family: 'Poppins';
+    margin-bottom: 10px;
+}
+#slider-container{
+    margin-top: 60px;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#image{
+    width:auto;
+    height:50vh;
+    margin-bottom: 40px;
+    margin-left: 150px;
+}
+#image img{
+    height:100%;
+    width:30vw;
+    border-radius: 20px;
+}
+.slider{
+width:10px;
+height:10px;
+border-radius: 100px;
+border: none;
+background-color: #E1CBD7;
+}
+.slider:hover{
+    cursor: pointer;
+
+}
+#slider-container .header{
+    color:#C38EB4;
+
+}
+#imgdesc{
+    width:50vh;
+    height:auto;
+    text-align: center;
+    color:#E1CBD7;
+    
+}
+
 footer{
     margin-top: 10px;
     display:flex;
     flex-wrap: wrap;
+    height:150px;
     justify-content: space-around;
     background-color: #26425A;
     color:#E1CBD7;
     width: 100%;
     bottom: 0;
-    min-height: 175px;
+    height: 175px;
     position: relative;
 }
 .container{
