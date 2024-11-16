@@ -114,16 +114,19 @@ main{
     margin-bottom: 175px;
 }
 #backgroundLayer{
-    background-color: #26425A;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
     padding-top: 30px;
     margin-top: 20px;
     width:100%;
-    min-height:30vh;
+    height: 100vh;
     border:2px solid #C38EB4;
+    background-image: url("StockCake-Fashionable\ Storefront\ Display_1731757706.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #backgroundLayer p{
     text-align: center;
@@ -132,8 +135,8 @@ main{
     padding-right: 20px;
 }
 #backgroundLayer p,h1{
-    color:#E1CBD7;
-    width: 100%;
+    color: #efd6e4;
+    width: 60%;
 }
 #backgroundLayer h1{
     margin-bottom: 30px;
@@ -152,7 +155,7 @@ main{
 #introduction p,h3{
     color:#E1CBD7;
     text-align: center;
-    width: 60%;
+    width: 50%;
 }
 #aboutUsContainer{
     margin-top: 20px;
@@ -178,6 +181,13 @@ main{
 .AboutUsContainerCLASS p,h3{
     color:#E1CBD7;
     text-align: center;
+    width: 70%;
+}
+.left{
+    background-color: #26425A;
+}
+.right{
+    background-color: #86A8CF;
 }
 .line_2{
     display:block;
