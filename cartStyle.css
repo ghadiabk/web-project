@@ -1,11 +1,104 @@
 *{
-    padding: 0px;
     margin: 0px;
+    padding:0px;
     box-sizing: border-box;
 }
 body{
     background-color: #1d3041;
+    font-family: 'Poppins';
 }
+#cart-container{
+    margin-top:50px ;
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    height:70vh;
+    gap:300px;
+
+}
+
+#cart-details{
+    width:300px;
+    background-color: #E1CBD7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color:#26425A;
+    border-radius: 10px;
+}
+#cart-head{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:30px;
+}
+#myCart{
+    font-weight: 800;
+    margin-top: 20px;
+    padding-top: 10px;
+    width:100%;
+    height:40px;
+    background-color:#26425A;
+    color:#E1CBD7;
+}
+#cart-foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:15px;
+    margin: 20px;
+    border-top: 1px solid #1d3041;
+}
+#purchase-details{
+    border: 2px solid #C38EB4;
+    height:auto;
+    max-height:500px;
+    width:600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#check-outItems{
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    overflow-y:auto; 
+    padding: 10px; 
+}
+
+.item{
+    background-color: #E1CBD7;
+    width:100%;
+    height:100px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+#check-out{
+    margin-top: 20px;
+    text-align: center;
+    height:50px;
+    align-items: center;
+}
+#check-out button{
+    border: none;
+    background-color: #E1CBD7;
+    color:#26425A;
+    font-size:15px;
+    width:100px;
+    height:40px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+#check-out button:hover{
+    transform: scale(1.1);
+    background-color: #1d3041;
+    color:#E1CBD7;
+    border: 2px solid #E1CBD7;
+}
+
+
+
 header{
     display: flex;
     width: 100%;
@@ -17,7 +110,7 @@ header{
     color:#E1CBD7;
     position: sticky;
     top: 0;
-    z-index: 200;
+    z-index: 1;
 }
 #logo{
     max-width: 200px;
@@ -29,18 +122,6 @@ header{
     border: none;
     display: none;
     margin-left: auto;
-}
-#cart-icon{
-    color:#C38EB4;
-    font-size: smaller;
-    transition: 0.2s;
-}
-#cart-icon.active {
-    color: #86A8CF; 
-  }
-#cart-icon:hover{
-    color: #86A8CF;
-    transform: scale(1.1);
 }
 #menu, #cart{
    height:39px;
@@ -60,6 +141,17 @@ header{
     margin-left: 10px;
     padding: 10px;
 }
+#cart-icon{
+    color:#C38EB4;
+    font-size: smaller;
+}
+#cart-icon.active {
+    color: #86A8CF; 
+  }
+  #cart-icon:hover{
+    color: #86A8CF;
+    transform: scale(1.1);
+}
 .menu-pc{
     margin-left: auto;
     display: flex;
@@ -71,6 +163,8 @@ header{
     color:#C38EB4;
     text-decoration: none;
     padding: 5px;
+    font-family: 'Poppins';
+    font-size: small;
 }
 .menu-pc a:hover{
     text-decoration: underline;
@@ -95,6 +189,7 @@ header{
     display: block;
     font-size: large;
     font-weight: bold;
+    font-family: 'Poppins';
 }
 .sidebar a:hover{
     cursor: pointer;
@@ -115,143 +210,18 @@ header{
     #hamMenu{
         display: block;
     }
-    #aboutUsContainer{
-       flex-direction: column;
-    }
-    .AboutUsContainerCLASS{
-        flex-wrap: wrap;
-    }
-}
-main{
-    min-height: 87vh;
-    margin-bottom: 175px;
-}
-#backgroundLayer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding-top: 30px;
-    margin-top: 20px;
-    width:100%;
-    height: 100vh;
-    border:2px solid #C38EB4;
-    background-image: url("StockCake-Fashionable\ Storefront\ Display_1731757706.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#backgroundLayer p{
-    text-align: center;
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-#backgroundLayer p,h1{
-    color: #efd6e4;
-    width: 60%;
-}
-#backgroundLayer h1{
-    margin-bottom: 30px;
-}
-#introduction{
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-top: 20px;
-    align-items: center;
-    width:100%;
-    height:auto;
-    gap: 10px;
-}
-#introduction p,h3{
-    color:#E1CBD7;
-    text-align: center;
-    width: 50%;
-}
-#aboutUsContainer{
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap:10px;
-    width:100%;
-    min-height:200px;
-    padding: 20px;
-}
-.AboutUsContainerCLASS{
-    flex: 1;
-    padding:20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20px;
-    align-items: center;
-    width:100%;
-    height: auto;
-    gap:10px;
-    padding-bottom: 10px;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-}
-.AboutUsContainerCLASS p,h3,span{
-    color:#E1CBD7;
-    text-align: center;
-    width: 70%;
-    transition: opacity 0.3s ease-in-out;
-}
-.AboutUsContainerCLASS p{
-    opacity: 0;
-    max-height: 20px;
-    padding-top: 5px;
-    overflow: hidden;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-in-out, max-height 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-.AboutUsContainerCLASS:hover{
-    flex: 3;
-}
-.AboutUsContainerCLASS:hover p {
-    opacity: 1;
-    max-height: 200px;
-    transform: translateY(0);
-    padding-top: 10px;
-}
-#aboutUsContainer .AboutUsContainerCLASS:not(:hover) {
-    flex: 0.5;
-}
-.left,.right{
-    background-color: #26425A;
-}
-.line_2{
-    display:block;
-    height:4px;
-    width:150px;
-    background-color: #C38EB4;
-    border-radius: 20px;
-}
-#location{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 100px;
-}
-.map{
-    z-index: 1;
 }
 footer{
-    margin-top: 10px;
+    margin-top: 50px;
     display:flex;
     flex-wrap: wrap;
+    height:150px;
     justify-content: space-around;
     background-color: #26425A;
     color:#E1CBD7;
     width: 100%;
     bottom: 0;
-    min-height: 175px;
+    height: 175px;
     position: relative;
 }
 .container{

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="cartStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/e652208c14.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="imgs/LogoPink.png" alt="logo" id="logo">
+        <button id="hamMenu" onclick="toggleSidebar()">
+            <div id="menu"><i class="fa-solid fa-bars"></i></div>
+        </button>
+        <div class="menu-pc">
+            <a href="shop.html">Home</a>
+            <a href="">Sign up</a>
+            <a href="aboutUs.html">About us</a>
+            <a href="">Contact</a>
+        </div>
+        <div id="cart"><a href="cart.html"><i id="cart-icon" class="fa-solid fa-cart-shopping"></i></a></div>
+        <div class="sidebar" id="sidebar">
+            <a href="shop.html">Home</a>
+            <a href="#">Sign up</a>
+            <a href="aboutUs.html">About us</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+    </header>
+
+<section id="cart-container">
+ <div id="purchase-details">
+    <div id="check-outItems">
+       <div class="item"></div>
+      
+       
+       
+     
+       
+      
+      
+     </div>
+    <div id="check-out">
+        <button id="buybtn">Check Out</button>
+    </div>
+ </div>
+
+
+<div id="cart-details">
+
+    <div id="cart-head">
+  <p id="myCart">My Cart</p>
+  <h3 id="cart-state">Your cart is empty</h3>
+    </div>
+
+    <div id="cart-foot">
+     <h3>Total</h3>
+     <h2 id="total">0.00$</h2>
+    </div>
+
+</div>
+</section>
+<footer>
+    <section class =container id="container1">
+        <div id="logofooter"><img src="imgs/LogoPink.png">   </div>
+        <p> Email us: ShopChroma@gmail.com</p>
+        <div class="icons">
+            <div id="facebook"> <i class="fa-brands fa-facebook-f"></i></div>
+            <div id="twitter"> <i class="fa-brands fa-twitter"></i></div>
+            <div id="instagram"> <i class="fa-brands fa-instagram"></i></div>
+        </div>
+        <p>&copy; All rights reserved.</p>
+    </section>
+    <section class=container id="container2">
+        <div class="footerinfo">
+            <h4>About Us</h4>
+            <span class="line"></span>
+            <p><i class="fa-solid fa-location-dot"></i> Lebanon-Beirut</p>
+            <p><i class="fa-solid fa-phone"></i> 012-345</p>
+            <a href="aboutUs.html">More Information</a>
+        </div>
+        <div class="footerinfo">
+            <h4> Shop</h4>
+            <span class="line"></span>
+            <p>Product page</p>
+            <p>Deals</p>
+            <p>Sign up</p>
+        </div>
+    </section>
+</footer>
+
+
+
+    
+
+<script src="scriptCart.js"></script>
+</body>
+</html>

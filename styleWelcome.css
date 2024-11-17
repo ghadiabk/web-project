@@ -22,6 +22,7 @@ header{
 #logo{
     max-width: 200px;
     max-height: 60px;
+    margin-left: 50px;
 }
 #hamMenu{
     background-color: #26425A;
@@ -46,6 +47,17 @@ header{
 #cart{
     margin-left: 10px;
     padding: 10px;
+}
+#cart-icon{
+    color:#C38EB4;
+    font-size: smaller;
+}
+#cart-icon.active {
+    color: #86A8CF; 
+  }
+  #cart-icon:hover{
+    color: #86A8CF;
+    transform: scale(1.1);
 }
 .menu-pc{
     margin-left: auto;
@@ -240,7 +252,21 @@ header{
     height:50vh;
     margin-bottom: 40px;
     margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
 }
+#start-shopping{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#C38EB4;
+}
+#shopping{
+    color:#E1CBD7;
+    font-weight: 800;
+}
+
 #image img{
     height:100%;
     width:30vw;
@@ -252,10 +278,16 @@ height:10px;
 border-radius: 100px;
 border: none;
 background-color: #E1CBD7;
+transition: 0.2s;
 }
 .slider:hover{
     cursor: pointer;
     background-color: #C38EB4;
+    transform: scale(1.1);
+}
+.slider .active{
+    background-color: #C38EB4;
+    transform: scale(1.1);
 }
 #slider-container .header{
     color:#C38EB4;

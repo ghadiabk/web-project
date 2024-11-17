@@ -50,15 +50,30 @@ let imgs = ["imgs/EXCLUSIVE OFFERS.jpg", "imgs/NEW ARRIVALS.jpg"];
     });
        
     }
+  
 
     let slide1 =document.getElementById("slide1");
     slide1.addEventListener("click", function(){
        updateSlider(0);
-
     });
 
     let slide2 =document.getElementById("slide2");
     slide2.addEventListener("click", function(){
         updateSlider(1);
     });
+
+    let heroimgs=["imgs/Modern Clothing Store.jpg","imgs/StockCake-Fashion store interior_1731771790.jpg"];
+    let heroImg= document.getElementById("heroImg");
+    let currentIndex=0;
+
+
+function updateHeroImage() {
+    currentIndex = (currentIndex + 1) % heroimgs.length;
+    $(heroImg).fadeOut(300, function () {
+        heroImg.src = heroimgs[currentIndex];
+        $(heroImg).fadeIn(300);
+    });
+}
+setInterval(updateHeroImage, 5000);
+
 });
