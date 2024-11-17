@@ -160,13 +160,14 @@ main{
 #aboutUsContainer{
     margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap:10px;
     width:100%;
     min-height:200px;
     padding: 20px;
 }
 .AboutUsContainerCLASS{
+    flex: 1;
     padding:20px;
     display: flex;
     justify-content: center;
@@ -177,17 +178,37 @@ main{
     height: auto;
     gap:10px;
     padding-bottom: 10px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
-.AboutUsContainerCLASS p,h3{
+.AboutUsContainerCLASS p,h3,span{
     color:#E1CBD7;
     text-align: center;
     width: 70%;
+    transition: opacity 0.3s ease-in-out;
 }
-.left{
+.AboutUsContainerCLASS p{
+    opacity: 0;
+    max-height: 20px;
+    padding-top: 5px;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-in-out, max-height 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+.AboutUsContainerCLASS:hover{
+    flex: 3;
+}
+.AboutUsContainerCLASS:hover p {
+    opacity: 1;
+    max-height: 200px;
+    transform: translateY(0);
+    padding-top: 10px;
+}
+#aboutUsContainer .AboutUsContainerCLASS:not(:hover) {
+    flex: 0.5;
+}
+.left,.right{
     background-color: #26425A;
-}
-.right{
-    background-color: #86A8CF;
 }
 .line_2{
     display:block;
@@ -202,8 +223,8 @@ main{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
     gap: 10px;
+    margin-top: 100px;
 }
 .map{
     z-index: 1;
