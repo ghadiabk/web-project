@@ -6,10 +6,13 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="signup.css">
     <script src="signup.js" defer></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="back"><a href="shop.html"><button><i class="fa fa-angle-double-left"></i> back</button></a></div>
+    <div class="back">
+      <a href="index.html"><button><i class="fa fa-angle-double-left"></i> back</button></a>
+    </div>
     <div class="wrapper">
         <div class="title-text">
           <div class="title login">Login Form</div>
@@ -26,10 +29,10 @@
           <div class="form-inner">
             <form action="#" class="login">
               <div class="field">
-                <input type="text" placeholder="Email Address" required>
+                <input type="text" id="login-email" placeholder="Email Address" required>
               </div>
               <div class="field">
-                <input type="password" placeholder="Password" required>
+                <input type="password" id="login-password" placeholder="Password" required>
               </div>
               <div class="pass-link"><a href="#">Forgot password?</a></div>
               <div class="field btn">
@@ -40,13 +43,13 @@
             </form>
             <form action="#" class="signup">
               <div class="field">
-                <input type="text" placeholder="Email Address" required>
+                <input type="text" id="signup-email" placeholder="Email Address" required>
               </div>
               <div class="field">
-                <input type="password" placeholder="Password" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
               </div>
               <div class="field">
-                <input type="password" placeholder="Confirm password" required>
+                <input type="password" id="confirm-password" placeholder="Confirm password" required>
               </div>
               <div class="field btn">
                 <div class="btn-layer"></div>

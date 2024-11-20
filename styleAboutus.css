@@ -18,30 +18,38 @@ header{
     color:#E1CBD7;
     position: sticky;
     top: 0;
-    z-index: 200;
+    z-index: 1;
 }
 #logo{
     max-width: 200px;
     max-height: 60px;
     margin-left: 50px;
 }
-#hamMenu{
-    background-color: #26425A;
+#hamMenu {
+    background-color: transparent;
     border: none;
     display: none;
     margin-left: auto;
+    cursor: pointer;
+    z-index: 1001;
 }
-#cart-icon{
-    color:#C38EB4;
-    font-size: smaller;
-    transition: 0.2s;
+#hamMenu .bar {
+    width: 30px;
+    height: 4px;
+    margin: 6px auto;
+    background-color: #E1CBD7;
+    transition: all 0.3s ease-in-out;
 }
-#cart-icon.active {
-    color: #86A8CF; 
-  }
-#cart-icon:hover{
-    color: #86A8CF;
-    transform: scale(1.1);
+#hamMenu.is-active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+#hamMenu.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#hamMenu.is-active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
 }
 #menu, #cart{
    height:39px;
@@ -61,10 +69,21 @@ header{
     margin-left: 10px;
     padding: 10px;
 }
+#cart-icon{
+    color:#C38EB4;
+    font-size: smaller;
+}
+#cart-icon.active {
+    color: #86A8CF; 
+  }
+  #cart-icon:hover{
+    color: #86A8CF;
+    transform: scale(1.1);
+}
 .menu-pc{
     margin-left: auto;
     display: flex;
-    gap:20px;
+    gap:10px;
     font-family: 'Poppins';
     font-size: medium;
 }
@@ -72,6 +91,8 @@ header{
     color:#C38EB4;
     text-decoration: none;
     padding: 5px;
+    font-family: 'Poppins';
+    font-size: small;
 }
 .menu-pc a:hover{
     text-decoration: underline;
@@ -96,6 +117,7 @@ header{
     display: block;
     font-size: large;
     font-weight: bold;
+    font-family: 'Poppins';
 }
 .sidebar a:hover{
     cursor: pointer;

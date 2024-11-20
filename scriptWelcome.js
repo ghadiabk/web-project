@@ -74,6 +74,11 @@ function updateHeroImage() {
         $(heroImg).fadeIn(300);
     });
 }
+function loadInitialImage() {
+    heroImg.src = heroimgs[currentIndex];
+    $(heroImg).hide().fadeIn(300);
+}
+loadInitialImage();
 setInterval(updateHeroImage, 5000);
 
 });
