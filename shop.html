@@ -6,24 +6,28 @@
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <img src="imgs/LogoPink.png" alt="logo" id="logo">
         <button id="hamMenu" onclick="toggleSidebar()">
-            <div id="menu"><i class="fa-solid fa-bars"></i></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </button>
         <div class="menu-pc">
-            <a href="shop.html">Home</a>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
             <a href="signup.html">Sign up</a>
             <a href="aboutUs.html">About us</a>
             <a href="">Contact</a>
+            <div id="cart"><a href="cart.html"><i id="cart-icon" class="fa-solid fa-cart-shopping"></i></a></div>
         </div>
-        <div id="cart"><a href="cart.html"><i id="cart-icon" class="fa-solid fa-cart-shopping"></i></a></div>
+       
         <div class="sidebar" id="sidebar">
             <a href="shop.html">Home</a>
             <a href="#">Sign up</a>
@@ -34,210 +38,24 @@
     </header>
     <main>
         <div id="filters">
-            <button class="filter" data-filter="*" onclick=filter(event)>
-                All
-            </button>
-            <button class="filter" data-filter="tops" onclick=filter(event)>
-                Tops
-            </button>
-            <button class="filter" data-filter="pants" onclick=filter(event)>
-                Pants
-            </button>
-            <button class="filter" data-filter="dresses" onclick=filter(event)>
-                Dresses
-            </button>
-            <button class="filter" data-filter="shoes" onclick=filter(event)>
-                Shoes
-            </button>
-            <button class="filter" data-filter="shorts" onclick=filter(event)>
-                Shorts
-            </button>
-            <button class="filter" data-filter="bags" onclick=filter(event)>
-                Bags
-            </button>
-            <button class="filter" data-filter="female" onclick=filter(event)>
-                Female
-            </button>
-            <button class="filter" data-filter="male" onclick=filter(event)>
-                Male
-            </button>
-            <button class="filter" data-filter="wishlist" onclick=filter(event)>
-                WishListed
-            </button>
+            <button class="filter" data-filter="*" onclick="filter(event)">All</button>
+            <button class="filter" data-filter="tops" onclick="filter(event)">Tops</button>
+            <button class="filter" data-filter="pants" onclick="filter(event)">Pants</button>
+            <button class="filter" data-filter="dresses" onclick="filter(event)">Dresses</button>
+            <button class="filter" data-filter="shoes" onclick="filter(event)">Shoes</button>
+            <button class="filter" data-filter="shorts" onclick="filter(event)">Shorts</button>
+            <button class="filter" data-filter="bags" onclick="filter(event)">Bags</button>
+            <button class="filter" data-filter="female" onclick="filter(event)">Female</button>
+            <button class="filter" data-filter="male" onclick="filter(event)">Male</button>
+            <button class="filter" data-filter="wishlist" onclick="filter(event)">WishListed</button>
         </div>
-        <div class="productContainer">
-            <div class="productBox tops female">
-                <img src="imgs/White Top.png" alt="">
-                <p class="productName">White Top</p>
-                <p>19.99$</p>
-                  <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul>
-            </div>
-            <div class="productBox tops female">
-                <img src="imgs/White Top with Red.png" alt="">
-                <p class="productName">Cherry Top</p>
-                <p>15$</p>
-                <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul>
-            </div>
-            <div class="productBox pants female">
-                <img src="imgs/Star Denim Jeans.png" alt="">
-                <p class="productName">Star Denim Jeans</p>
-                <p>31.99$</p>
-                <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul>
-            </div>
-            <div class="productBox dresses female">
-                <img src="imgs/Off White Dress.png" alt="">
-                <p class="productName">Off-White Dress</p>
-                <p>50$</p>
-                <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul>
-            </div>
-            <div class="productBox shoes female">
-                <img src="imgs/Beige Boots.png" alt="">
-                <p class="productName">Beige Boots</p>
-                <p>20$</p>
-                <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul> 
-            </div>
-            <div class="productBox shoes female">
-                <img src="imgs/Black MaryJanes.png" alt="">
-                <p class="productName">Black Mary-Janes</p>
-                <p>40$</p>
-                <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul>
-            </div>
-            <div class="productBox shoes male">
-                <img src="imgs/Black shoes.png" alt="">
-                <p class="productName">Platform Shoes</p>
-                <p>19.99$</p>
-                <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul>
-            </div>
-            <div class="productBox pants male">
-                <img src="imgs/Brown Cargo Pants.png" alt="">
-                <p class="productName">Cargo Pants</p>
-                <p>25$</p>
-                <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul> 
-            </div>
-            <div class="productBox tops male">
-                <img src="imgs/Grey Sweater.png" alt="">
-                <p class="productName">Sweater</p>
-                <p>19.99$</p>
-                <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul>
-            </div>
-            <div class="productBox pants male">
-                <img src="imgs/Male Denim Jeans.png" alt="">
-                <p class="productName">Jeans</p>
-                <p>30.99$</p>
-                <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul> 
-            </div>
-            <div class="productBox tops male">
-                <img src="imgs/White Shirt.png" alt="">
-                <p class="productName">White T-Shirt</p>
-                <p>10$</p>
-                <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul>
-            </div>
-            <div class="productBox shoes male">
-                <img src="imgs/White_shoes.png" alt="">
-                <p class="productName">White Sneakers</p>
-                <p>19.99$</p>
-                <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul>
-            </div>
-            <div class="productBox shorts male">
-                <img src="imgs/white_shorts.png" alt="">
-                <p class="productName">Shorts</p>
-                <p>12.99$</p>
-                <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul>
-            </div>
-            <div class="productBox bags">
-                <img src="imgs/Minimalist Baguette Bag.png" alt="">
-                <p class="productName">Minimalist Baguette Bag</p>
-                <p>19.99$</p>
-                <ul class="stars">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                  </ul>
-            </div>
-        </div>
+        <div class="productContainer"></div>
         <div id="contactBtn"><img src="imgs/Contact Us btn.png" alt=""></div>
     </main>
-    <footer>
+
+
+
+     <footer>
         <section class =container id="container1">
             <div id="logofooter"><img src="imgs/LogoPink.png">   </div>
             <p> Email us: ShopChroma@gmail.com</p>
@@ -265,5 +83,6 @@
             </div>
         </section>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

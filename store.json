@@ -1,0 +1,106 @@
+{
+"product":[
+    {
+        "name": "White Top",
+        "category": ["tops", "female"],
+        "price": "19.99$",
+        "image": "imgs/White Top.png",
+        "rating": 5
+    },
+    {
+        "name": "Cherry Top",
+        "category": ["tops", "female"],
+        "price": "15$",
+        "image": "imgs/White Top with Red.png",
+        "rating": 5
+    },
+    {
+        "name": "Star Denim Jeans",
+        "category": ["pants", "female"],
+        "price": "31.99$",
+        "image": "imgs/Star Denim Jeans.png",
+        "rating": 5
+    },
+    {
+        "name": "Off-White Dress",
+        "category": ["dresses", "female"],
+        "price": "50$",
+        "image": "imgs/Off White Dress.png",
+        "rating": 5
+    },
+    {
+        "name": "Beige Boots",
+        "category": ["shoes", "female"],
+        "price": "20$",
+        "image": "imgs/Beige Boots.png",
+        "rating": 5
+    },
+    {
+        "name": "Black Mary-Janes",
+        "category": ["shoes", "female"],
+        "price": "40$",
+        "image": "imgs/Black MaryJanes.png",
+        "rating": 5
+    },
+    {
+        "name": "Platform Shoes",
+        "category": ["shoes", "male"],
+        "price": "19.99$",
+        "image": "imgs/Black shoes.png",
+        "rating": 5
+    },
+    {
+        "name": "Cargo Pants",
+        "category": ["pants", "male"],
+        "price": "25$",
+        "image": "imgs/Brown Cargo Pants.png",
+        "rating": 5
+    },
+    {
+        "name": "Sweater",
+        "category": ["tops", "male"],
+        "price": "19.99$",
+        "image": "imgs/Grey Sweater.png",
+        "rating": 5
+    },
+    {
+        "name": "Jeans",
+        "category": ["pants", "male"],
+        "price": "30.99$",
+        "image": "imgs/Male Denim Jeans.png",
+        "rating": 5
+    },
+    {
+        "name": "White T-Shirt",
+        "category": ["tops", "male"],
+        "price": "10$",
+        "image": "imgs/White Shirt.png",
+        "rating": 5
+    },
+    {
+        "name": "White Sneakers",
+        "category": ["shoes", "male"],
+        "price": "19.99$",
+        "image": "imgs/White_shoes.png",
+        "rating": 5
+    },
+    {
+        "name": "Shorts",
+        "category": ["shorts", "male"],
+        "price": "12.99$",
+        "image": "imgs/white_shorts.png",
+        "rating": 5
+    },
+    {
+        "name": "Minimalist Baguette Bag",
+        "category": ["bags"],
+        "price": "19.99$",
+        "image": "imgs/Minimalist Baguette Bag.png",
+        "rating": 5
+    }
+
+
+]
+
+
+}

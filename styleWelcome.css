@@ -272,6 +272,10 @@ header{
     width:30vw;
     border-radius: 20px;
 }
+#sliders{
+    display: flex;
+    gap:30px;
+}
 .slider{
 width:10px;
 height:10px;
