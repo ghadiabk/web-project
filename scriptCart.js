@@ -10,13 +10,13 @@ $(document).ready(function() {
             $("#total").text("0.00$");
         } else {
             cart.forEach(item => {
-                total += parseFloat(item.price.replace('$', ''));
+                total += parseFloat(item.price.replace('$', '')) * item.quantity;
                 let cartItem = `
                     <div class="item">
                     <div id="productImg">
                         <img src="${item.image}" alt="${item.name}" class="cart-item-image"></div>
                         <div id= "productDetails-cart">
-                        <p>${item.name}</p>
+                        <p>${item.name} (x${item.quantity})</p>
                         <p>${item.price}</p> </div>
                         <div id="removeBtn">
                         <button class="remove-item" data-product-name="${item.name}">Remove</button></div>
@@ -34,7 +34,31 @@ $(document).ready(function() {
     $(document).on('click', '.remove-item', function() {
         let productName = $(this).data("product-name");
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart = cart.filter(item => item.name !== productName);
+        let product = cart.find(item => item.name === productName);
+
+        if (product && product.quantity > 1) {
+            product.quantity -= 1;
+        } else {
+            cart = cart.filter(item => item.name !== productName);
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        renderCart();
+    });
+
+    $(document).on('click', '#addToCart-icon button', function() {
+        let productName = $(this).data("product-name");
+        let productPrice = $(this).data("product-price");
+        let productImage = $(this).closest('.productBox').find('img').attr('src');
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        let existingProduct = cart.find(item => item.name === productName);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            cart.push({ name: productName, price: productPrice, image: productImage, quantity: 1 });
+        }
+
         localStorage.setItem("cart", JSON.stringify(cart));
         renderCart();
     });

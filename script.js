@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     let productData = {
         "product": [
             {
@@ -35,14 +34,14 @@ $(document).ready(function() {
                 "category": ["shoes", "female"],
                 "price": "20$",
                 "image": "imgs/Beige Boots.png",
-                "rating": 5
+                "rating": 3
             },
             {
                 "name": "Black Mary-Janes",
                 "category": ["shoes", "female"],
                 "price": "40$",
                 "image": "imgs/Black MaryJanes.png",
-                "rating": 5
+                "rating": 4
             },
             {
                 "name": "Platform Shoes",
@@ -56,14 +55,14 @@ $(document).ready(function() {
                 "category": ["pants", "male"],
                 "price": "25$",
                 "image": "imgs/Brown Cargo Pants.png",
-                "rating": 5
+                "rating": 3
             },
             {
                 "name": "Sweater",
                 "category": ["tops", "male"],
                 "price": "19.99$",
                 "image": "imgs/Grey Sweater.png",
-                "rating": 5
+                "rating": 4
             },
             {
                 "name": "Jeans",
@@ -94,7 +93,7 @@ $(document).ready(function() {
                 "rating": 5
             },
             {
-                "name": "Minimalist Baguette Bag",
+                "name": "Baguette Bag",
                 "category": ["bags"],
                 "price": "19.99$",
                 "image": "imgs/Minimalist Baguette Bag.png",
@@ -105,7 +104,7 @@ $(document).ready(function() {
 
     function renderProducts(products) {
         let productContainer = $(".productContainer");
-        productContainer.empty(); 
+        productContainer.empty();
         products.forEach(product => {
             let stars = "<ul class='stars'>" + "<li><i class='fa-solid fa-star'></i></li>".repeat(product.rating) + "</ul>";
             let productBox = `
@@ -122,48 +121,32 @@ $(document).ready(function() {
                 </div>
             `;
             productContainer.append(productBox);
-
-            let cart = JSON.parse(localStorage.getItem("cart")) || [];
-            cart.forEach(item => {
-                if (item.name === product.name) {
-                    let button = $(".add-to-cart[data-product-name='" + product.name + "']");
-                    button.html('<i class="fa-solid fa-check"></i>') 
-                        .css({
-                            'background': 'linear-gradient(45deg, #1d3041, #C38EB4)',
-                            'color': '#fff',
-                            'transform': 'scale(1.1)',
-                            'transition': 'all 0.3s ease',
-                        });
-                }
-            });
         });
     }
 
-    function filter(event) {
-        let filterValue = $(event.target).data("filter"); 
-        let products = $(".productBox");
+    function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let totalCount = cart.reduce((total, item) => total + item.quantity, 0);
+        $('#cartcount').text(totalCount);
+    }
 
-        if (filterValue === "*") {
-            products.show();
-        } else {
-            products.each(function() {
-                let categories = $(this).attr("class").split(" ");
-                if (categories.includes(filterValue)) {
-                    $(this).show(); 
-                } else {
-                    $(this).hide();
-                }
-            });
-        }
+    function filter(event) {
+        let filterValue = $(event.target).data("filter");
+        let filteredProducts = productData.product.filter(product => {
+            if (filterValue === "all") {
+                return true;
+            }
+            return product.category.includes(filterValue);
+        });
+        renderProducts(filteredProducts);
     }
 
     renderProducts(productData.product);
+    updateCartCount();
 
     $(".filter").click(function(event) {
         filter(event);
     });
-
-   
 
     $(document).on('click', '#addToCart-icon button', function() {
         let productName = $(this).data("product-name");
@@ -171,48 +154,34 @@ $(document).ready(function() {
         let productImage = $(this).closest('.productBox').find('img').attr('src');
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        let productExists = cart.some(item => item.name === productName);
-        if (!productExists) {
-            cart.push({ name: productName, price: productPrice,image:productImage });
-            localStorage.setItem("cart", JSON.stringify(cart));
-            $(this).html('<i class="fa-solid fa-check"></i>') 
-                .css({
-                    'background': 'linear-gradient(45deg, #1d3041, #C38EB4)',
-                    'color': '#fff',
-                    'transform': 'scale(1.1)',
-                    'transition': 'all 0.3s ease',
-                });
+        let existingProduct = cart.find(item => item.name === productName);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            cart.push({ name: productName, price: productPrice, image: productImage, quantity: 1 });
         }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+        showPopupMessage("Item added successfully!"); 
     });
 
 });
 
 let sidebar = document.getElementById("sidebar");
 let overlay = document.getElementById("overlay");
+
 function toggleSidebar() {
     if (sidebar.style.right === "-250px") {
-      sidebar.style.right = "0";
-      overlay.style.display = "block";
-    } 
-    else {
+        sidebar.style.right = "0";
+        overlay.style.display = "block";
+    } else {
         sidebar.style.right = "-250px";
         overlay.style.display = "none";
-      }
+    }
 }
+
 function closeSidebar() {
     sidebar.style.right = "-250px";
     overlay.style.display = "none";
 }
-function filter(e) {
-  let products = document.querySelectorAll(".productContainer div");
-  let filter = e.target.dataset.filter;
-  if (filter === '*') {
-    products.forEach(product => product.classList.remove('hidden'));
-  }  else {
-    products.forEach(product => {
-      product.classList.contains(filter) ? 
-      product.classList.remove('hidden') : 
-      product.classList.add('hidden');
-    });
-  };
-};

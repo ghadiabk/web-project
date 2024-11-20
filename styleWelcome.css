@@ -226,6 +226,7 @@ header{
     width: 20%;
     max-width: 200px;
     background-color: #E1CBD7;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.582);
     border-radius: 20px;
     padding-bottom: 5px;
 }
@@ -322,6 +323,42 @@ transition: 0.2s;
     text-align: center;
     color:#E1CBD7;
 }
+@media screen and (max-width: 768px) {
+    #welcomeHero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #hero-headers{
+        align-items: center;
+    }
+    #hero-buttons{
+        width: 400px;
+        height:100px;
+       
+    }
+    #hero-buttons button{
+     font-size: larger;
+     width:300px;
+    }
+
+    #hero-img img{
+       display: none;
+    }
+    #slider-container{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    
+    }
+    #imgdesc{
+        text-align: center;
+        align-items: center;
+    }
+ 
+}
+
 
 footer{
     margin-top: 10px;

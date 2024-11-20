@@ -76,7 +76,7 @@ body{
     flex-shrink: 0;
     display: flex;
     flex-direction:row ;
-   justify-content: space-around;
+   justify-content: space-between;
 
 }
 .item img{
