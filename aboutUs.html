@@ -9,6 +9,7 @@
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="contact.js" defer></script>
 </head>
 <body>
     <header>
@@ -19,7 +20,7 @@
             <a href="shop.html">Shop</a>
             <a href="signup.html">Sign up</a>
             <a href="aboutUs.html">About us</a>
-            <a href="">Contact</a>
+            <a href="#" id="openPopupLink">Contact</a>
         </div>
         <div id="cart"><a href="cart.html"><i id="cart-icon" class="fa-solid fa-cart-shopping"></i></a></div>
         <div class="sidebar" id="sidebar">
@@ -27,11 +28,12 @@
             <a href="shop.html">Shop</a>
             <a href="signup.html">Sign up</a>
             <a href="aboutUs.html">About us</a>
-            <a href="#">Contact</a>
+            <a href="#" id="openPopupLink">Contact</a>
           </div>
           <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
     </header>
     <main>
+        <div id="popupContainer"></div>
         <div id="backgroundLayer">
             <h1> About Us</h1>
             <p>At Chroma, we believe that fashion is a powerful expression of individuality and creativity.

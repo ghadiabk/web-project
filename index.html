@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js" defer></script>
+    <script src="contact.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,7 +22,7 @@
             <a href="shop.html">Shop</a>
             <a href="signup.html">Sign up</a>
             <a href="aboutUs.html">About us</a>
-            <a href="">Contact</a>
+            <a href="#" id="openPopupLink">Contact</a>
         </div>
         <div id="cart"><a href="cart.html"><i id="cart-icon" class="fa-solid fa-cart-shopping"></i></a></div>
         <div class="sidebar" id="sidebar">
@@ -29,10 +30,11 @@
             <a href="shop.html">Shop</a>
             <a href="signup.html">Sign up</a>
             <a href="aboutUs.html">About us</a>
-            <a href="#">Contact</a>
+            <a href="#" id="openPopupLink">Contact</a>
         </div>
         <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
     </header>
+    <div id="popupContainer"></div>
     <section id="welcomeHero">   
         <div id="hero-headers">
             <h1>Style Redefined</h1>

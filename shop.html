@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="contact.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,7 +23,7 @@
             <a href="shop.html">Shop</a>
             <a href="signup.html">Sign up</a>
             <a href="aboutUs.html">About us</a>
-            <a href="">Contact</a>
+            <a href="#" id="openPopupLink">Contact</a>
         </div>
         <div id="cart"><a href="cart.html"><i id="cart-icon" class="fa-solid fa-cart-shopping"></i>
             <span id="cartcount" class="badge badge-pill badge-notify cart-count">0</span></a>
@@ -32,11 +33,12 @@
             <a href="shop.html">Shop</a>
             <a href="signup.html">Sign up</a>
             <a href="aboutUs.html">About us</a>
-            <a href="#">Contact</a>
+            <a href="#" id="openPopupLink">Contact</a>
         </div>
         <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
     </header>
     <main>
+        <div id="popupContainer"></div>
         <div id="filters">
             <button class="filter" data-filter="*" onclick="filter(event)">All</button>
             <button class="filter" data-filter="tops" onclick="filter(event)">Tops</button>
