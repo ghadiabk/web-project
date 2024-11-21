@@ -105,7 +105,9 @@ $(document).ready(function() {
     function renderProducts(products) {
         let productContainer = $(".productContainer");
         productContainer.empty();
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
         products.forEach(product => {
+            let isWishlisted = wishlist.includes(product.name);
             let stars = "<ul class='stars'>" + "<li><i class='fa-solid fa-star'></i></li>".repeat(product.rating) + "</ul>";
             let productBox = `
                 <div class="productBox ${product.category.join(' ')}">
@@ -113,10 +115,17 @@ $(document).ready(function() {
                     <p class="productName">${product.name}</p>
                     <p>${product.price}</p>
                     ${stars}
-                    <div id="addToCart-icon">
-                        <button class="add-to-cart" data-product-name="${product.name}" data-product-price="${product.price}">
-                            <i id="cart-icon" class="fa-solid fa-cart-shopping"></i>
-                        </button>
+                    <div id="box-icons">
+                        <div id="wishlist-icon">
+                            <button class="wishlist-btn" data-product-id="${product.name}">
+                                <i class="heart-icon ${isWishlisted ? 'fa-solid fa-heart filled' : 'fa-regular fa-heart'}"></i>
+                            </button>
+                        </div>
+                        <div id="addToCart-icon">
+                            <button class="add-to-cart" data-product-name="${product.name}" data-product-price="${product.price}">
+                                <i id="cart-icon" class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             `;
@@ -132,14 +141,24 @@ $(document).ready(function() {
 
     function filter(event) {
         let filterValue = $(event.target).data("filter");
-        let filteredProducts = productData.product.filter(product => {
-            if (filterValue === "all") {
-                return true;
-            }
-            return product.category.includes(filterValue);
-        });
+        let filteredProducts;
+    
+        if (filterValue === "wishlist") {
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+            filteredProducts = productData.product.filter(product => 
+                wishlist.includes(product.name)
+            );
+        } else if (filterValue === "*") {
+            filteredProducts = productData.product;
+        } else {
+            filteredProducts = productData.product.filter(product =>
+                product.category.includes(filterValue)
+            );
+        }
+    
         renderProducts(filteredProducts);
     }
+    
 
     renderProducts(productData.product);
     updateCartCount();
@@ -165,7 +184,30 @@ $(document).ready(function() {
         updateCartCount();
         showPopupMessage("Item added successfully!"); 
     });
-
+    $(document).on('click', '.wishlist-btn', function() {
+        let heartIcon = $(this).find('.heart-icon');
+        let productId = $(this).data('product-id');
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        if (wishlist.includes(productId)) {
+            wishlist = wishlist.filter(id => id !== productId);
+            heartIcon.removeClass('fa-solid filled').addClass('fa-regular');
+        } else {
+            wishlist.push(productId);
+            heartIcon.removeClass('fa-regular').addClass('fa-solid filled');
+        }
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    });
+    $(document).ready(function() {
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        wishlist.forEach((id) => {
+            let button = $(`.wishlist-btn[data-product-id="${id}"]`);
+            if (button.length > 0) {
+                let heartIcon = button.find('.heart-icon');
+                heartIcon.addClass('fa-solid filled').removeClass('fa-regular');
+            }
+        });
+    });
+    
 });
 
 let sidebar = document.getElementById("sidebar");

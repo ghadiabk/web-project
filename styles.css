@@ -218,6 +218,7 @@ main {
 }
 #addToCart-icon{
     text-align: end;
+    margin-left: auto;
 }
 #addToCart-icon i{
     font-size: large;
@@ -229,9 +230,25 @@ main {
     background: linear-gradient(45deg, #C38EB4 ,#1d3041,  #26425A);
     color: #E1CBD7;
     border: none;
-
 }
-
+#box-icons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+#wishlist-icon button{
+    background: transparent;
+    border: none;
+}
+.heart-icon{
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.heart-icon.filled {
+    color: red;
+}
 #addToCart-icon button:hover{
     cursor: pointer;
     transition: all 0.3s ease;
