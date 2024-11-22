@@ -68,6 +68,8 @@ $(document).ready(function() {
         if (cart.length === 0) {
             alert("Your cart is empty! Add items before proceeding to checkout.");
         } else {
+            localStorage.setItem("cart", JSON.stringify([]));
+            renderCart();
             console.log("Proceeding to checkout...");
             window.location.href = "shop.html";
         }

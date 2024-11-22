@@ -249,11 +249,35 @@ header{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.582);
     border-radius: 20px;
     padding-bottom: 5px;
+    transition: 0.2s;
+}
+.cards button{
+    border: none;
+    background-color: #E1CBD7;
+    color:#26425A;
+}
+.cards:hover .cards-icons{
+    animation: bounce 1.5s infinite;
+}
+.cards:hover{
+    transform: scale(1.05);
 }
 .cards-icons{
     margin-top: 10px;
     font-size: xxx-large;
     color:#26425A;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 .cards p{
     width:90%;
@@ -264,6 +288,7 @@ header{
     background-color: #26425A;
     border-radius: 10px;
     padding:5px;
+    
 }
 #details-slider{
     display: flex;

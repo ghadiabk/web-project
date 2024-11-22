@@ -33,6 +33,9 @@ body{
     text-align: center;
     gap:30px;
 }
+#cart-head h3 a {
+    color:#26425A;
+}
 #myCart{
     font-weight: 800;
     margin-top: 20px;
@@ -57,6 +60,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 2px solid #E1CBD7;
 }
 #check-outItems{
     height:500px;
@@ -104,6 +108,7 @@ body{
     background-color: #1d3041;
     color:#E1CBD7;
     transition: 0.2s;
+    
 }
 #removeBtn button:hover{
     border: 1px solid #1d3041;
