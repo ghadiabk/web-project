@@ -119,19 +119,19 @@ body{
 }
 #check-out button{
     border: none;
-    background-color: #E1CBD7;
+    background-color: #C38EB4;
     color:#26425A;
     font-size:15px;
-    width:100px;
-    height:40px;
+    width:150px;
+    height:50px;
     border-radius: 10px;
     transition: 0.3s;
 }
 #check-out button:hover{
     transform: scale(1.1);
-    background-color: #1d3041;
-    color:#E1CBD7;
-    border: 2px solid #E1CBD7;
+    background-color:#ac7d9e;
+    color:#1d3041;
+    border: 2px solid #1d3041;
 }
 
 
@@ -179,16 +179,15 @@ header{
     padding: 10px;
 }
 #cart-icon{
-    color:#C38EB4;
+    color:#86A8CF;
     font-size: smaller;
 }
-#cart-icon.active {
-    color: #86A8CF; 
-  }
+
   #cart-icon:hover{
     color: #86A8CF;
     transform: scale(1.1);
 }
+
 .menu-pc{
     margin-left: auto;
     display: flex;
@@ -260,6 +259,7 @@ footer{
     bottom: 0;
     height: 175px;
     position: relative;
+    font-size: small;
 }
 .container{
     width:300px;

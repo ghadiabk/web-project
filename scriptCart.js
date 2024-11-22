@@ -64,6 +64,12 @@ $(document).ready(function() {
     });
 
     $("#buybtn").click(function() {
-        alert("Proceeding to checkout!");
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        if (cart.length === 0) {
+            alert("Your cart is empty! Add items before proceeding to checkout.");
+        } else {
+            console.log("Proceeding to checkout...");
+            window.location.href = "shop.html";
+        }
     });
 });

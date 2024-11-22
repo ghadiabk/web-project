@@ -24,7 +24,9 @@
             <a href="aboutUs.html">About us</a>
             <a href="#" id="openPopupLink">Contact</a>
         </div>
-        <div id="cart"><a href="cart.html"><i id="cart-icon" class="fa-solid fa-cart-shopping"></i></a></div>
+        <div id="cart"><a href="cart.html"><i id="cart-icon" class="fa-solid fa-cart-shopping"></i>
+            <span id="cartcount" class="badge badge-pill badge-notify cart-count">0</span>
+        </a></div>
         <div class="sidebar" id="sidebar">
             <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
@@ -72,16 +74,22 @@
                 <h1 id="descHeader"></h1>
                 <div id="imgdesc"></div>
             </div>
-            <div id="image"> <img id="imgSlider" src=""> <div id="start-shopping">
-                 Start <span id="shopping">Shopping</span></div>
-            </div>
-        </div>
+            <div id="image"> <img id="imgSlider" src=""> <div id="start-shopping"></div>
+        </div></div>
         <div id="sliders">
             <button id="slide1" class="slider"></button>
             <button id="slide2" class="slider"></button>
             <button id="slide3" class="slider"></button>
         </div>
     </section>
+    <div class="carousel-container">
+        <div class="carousel">
+          <img src="" alt="Image 1" class="carousel-item">
+          <img src="" alt="Image 2" class="carousel-item">
+          <img src="" alt="Image 3"class="carousel-item">
+        </div>
+      </div>
+
 <footer>
     <section class =container id="container1">
         <div id="logofooter"><img src="imgs/LogoPink.png">   </div>
@@ -97,16 +105,16 @@
         <div class="footerinfo">
             <h4>About Us</h4>
             <span class="line"></span>
-            <p><i class="fa-solid fa-location-dot"></i> Lebanon-Beirut</p>
+            <p><a href="aboutUs.html#location"><i class="fa-solid fa-location-dot"></i> Lebanon-Beirut</a></p>
             <p><i class="fa-solid fa-phone"></i> 012-345</p>
             <a href="aboutUs.html">More Information</a>
         </div>
         <div class="footerinfo">
-            <h4> Shop</h4>
+            <h4>Shop</h4>
             <span class="line"></span>
-            <p>Product page</p>
+            <a href="shop.html"><p>Product page</p></a>
             <p>Deals</p>
-            <p>Sign up</p>
+            <a href="signup.html"><p>Sign up</p></a>
         </div>
     </section>
 </footer>

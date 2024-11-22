@@ -242,12 +242,12 @@ main {
 }
 .heart-icon{
     font-size: 24px;
-    color: white;
+    color: #1d3041;
     cursor: pointer;
     transition: color 0.3s;
 }
 .heart-icon.filled {
-    color: red;
+    color: rgb(152, 39, 39);
 }
 #addToCart-icon button:hover{
     cursor: pointer;
@@ -333,6 +333,7 @@ footer{
     height: 175px;
     position: relative;
     font-family: 'Times New Roman', Times, serif;
+    font-size: small;
 }
 .container{
     width:300px;
