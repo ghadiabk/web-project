@@ -158,6 +158,11 @@ header{
         display: block;
     }
 }
+marquee{
+    margin-top: 10px;
+    background-color: #C38EB4;
+    color: #1d3041;
+}
 #welcomeHero{
     margin-top: 50px;
     font-family: 'Poppins';
