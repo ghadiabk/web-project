@@ -111,7 +111,7 @@ header{
     text-decoration: none;
     padding: 5px;
     font-family: 'Poppins';
-    font-size: small;
+    font-size: medium;
 }
 .menu-pc a:hover{
     text-decoration: underline;
@@ -186,6 +186,8 @@ main{
 }
 #backgroundLayer p{
     text-align: center;
+    font-size: medium;
+    font-weight: 500;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;

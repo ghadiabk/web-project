@@ -93,7 +93,7 @@ header{
     text-decoration: none;
     padding: 5px;
     font-family: 'Poppins';
-    font-size: small;
+    font-size: medium;
 }
 .menu-pc a:hover{
     text-decoration: underline;
