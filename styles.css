@@ -1,18 +1,13 @@
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background-color:#1d3041;
     font-family:'Poppins';
     line-height: 1.6;
 }
-
-
 header{
     display: flex;
     width: 100%;
@@ -324,7 +319,6 @@ footer{
     margin-top: 10px;
     display:flex;
     flex-wrap: wrap;
-    height:160px;
     justify-content: space-around;
     background-color: #26425A;
     color:#E1CBD7;
