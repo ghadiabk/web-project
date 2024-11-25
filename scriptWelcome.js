@@ -25,28 +25,41 @@ $(document).ready(function () {
     ];
     let headers = ["Shop Exclusive Deals", "Fresh Looks, Just In!", "Feel the Difference"];
 
-    let imgSlider = document.getElementById("imgSlider");
-    let imgdesc = document.getElementById("imgdesc");
-    let descHeader = document.getElementById("descHeader");
-
-    imgSlider.src = imgs[0];
-    imgdesc.textContent = descriptions[0];
-    descHeader.textContent = headers[0];
+    let $imgSlider = $("#imgSlider");
+    let $imgdesc = $("#imgdesc");
+    let $descHeader = $("#descHeader");
+    let $sliders = $(".slider");
+    let Index = 0;
+    let autoSlideTime=5000;
 
     function updateSlider(index) {
-        $(imgSlider).fadeOut(300, function () {
-            imgSlider.src = imgs[index];
-            $(imgSlider).fadeIn(300);
+        $imgSlider.fadeOut(300, function () {
+          $imgSlider.attr("src", imgs[index]).fadeIn(300);
         });
-        $(imgdesc).fadeOut(300, function () {
-            imgdesc.textContent = descriptions[index];
-            $(imgdesc).fadeIn(300);
+        $imgdesc.fadeOut(300, function () {
+          $imgdesc.text(descriptions[index]).fadeIn(300);
         });
-        $(descHeader).fadeOut(300, function () {
-            descHeader.textContent = headers[index];
-            $(descHeader).fadeIn(300);
+        $descHeader.fadeOut(300, function () {
+          $descHeader.text(headers[index]).fadeIn(300);
         });
-    }
+        $sliders.removeClass("active");
+        $sliders.eq(index).addClass("active");
+      }
+
+      function nextSlide() {
+        Index = (Index + 1) % imgs.length;
+        updateSlider(Index);
+      }
+
+      $sliders.each(function (index) {
+        $(this).on("click", function () {
+          Index = index;
+          updateSlider(index);
+        });
+      });
+
+      updateSlider(Index);
+      setInterval(nextSlide, autoSlideTime);
 
     let totalImages = $('.carousel img').length;
     let indexNow = 0;
@@ -75,21 +88,6 @@ $(document).ready(function () {
 
     $('.carousel-container').on('mouseup touchend', function () {
         startX = undefined;
-    });
-
-    let slide1 = document.getElementById("slide1");
-    slide1.addEventListener("click", function () {
-        updateSlider(0);
-    });
-
-    let slide2 = document.getElementById("slide2");
-    slide2.addEventListener("click", function () {
-        updateSlider(1);
-    });
-
-    let slide3 = document.getElementById("slide3");
-    slide3.addEventListener("click", function () {
-        updateSlider(2);
     });
 
     let heroimgs = ["imgs/Modern Clothing Store.jpg", "imgs/StockCake-Fashion store interior_1731771790.jpg"];

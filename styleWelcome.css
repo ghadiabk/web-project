@@ -348,21 +348,21 @@ marquee{
     margin-bottom: 30px;
 }
 .slider{
-width:10px;
-height:10px;
-border-radius: 100px;
-border: none;
-background-color: #E1CBD7;
-transition: 0.2s;
+    width:10px;
+    height:10px;
+    border-radius: 100px;
+    border: none;
+    background-color: #E1CBD7;
+    transition: 0.2s;
 }
 .slider:hover{
     cursor: pointer;
     background-color: #C38EB4;
     transform: scale(1.1);
 }
-.slider .active{
+.slider.active{
     background-color: #C38EB4;
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
 #slider-container .header{
     color:#C38EB4;
