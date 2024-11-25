@@ -1,4 +1,58 @@
+let newArrivalsData={
+    newArrivals: [
+        {
+            "name":"Coat Dress",
+            "image":"imgs/Black Coat Dress.png",
+            "desc":"A beautiful and elegant Black Coat dress"
+        },
+
+        {
+            "name":"Puffer Jacket",
+            "image":"imgs/Black Puffer Jacket.png",
+            "desc":"Puffer Jackets are perfect to keep you warm during the winter"
+        },
+
+        {
+            "name":"Uggs",
+            "image":"imgs/uggs.png",
+            "desc":"The most comfortable boots that will also help you keep warm"
+        },
+
+    ]
+}
 $(document).ready(function () {
+
+    let container = $("#newArrivalContainer");
+    newArrivalsData.newArrivals.forEach((product)=>{
+        let newArrivalHTML = `
+        <div class=newArrivalBox>
+            <img src="${product.image}">
+            <div class="product-desc">
+            <p id="name"> ${product.name}</p>
+            <p id="desc"> ${product.desc}</p>
+            </div>
+        </div>
+        `;
+        container.append(newArrivalHTML);
+    }
+);
+
+
+    setTimeout(function() {
+      $('#promo-overlay').fadeIn();
+      $('body').addClass('promo-active');
+    }, 3000);
+  
+    $('#promo-close').on('click', function() {
+      $('#promo-overlay').fadeOut();
+      $('body').removeClass('promo-active'); 
+    });
+
+
+
+
+
+
 
     let shopBtn = document.getElementById("shopBtn");
     let aboutUsBtn = document.getElementById("aboutUsBtn");

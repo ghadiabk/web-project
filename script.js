@@ -98,9 +98,73 @@ $(document).ready(function() {
                 "price": "19.99$",
                 "image": "imgs/Minimalist Baguette Bag.png",
                 "rating": 5
+            },
+            {
+                "name":"Coat Dress",
+                "category":["female","dresses","new-arrival"],
+                "price":"20$",
+                "image":"imgs/Black Coat Dress.png",
+                "rating":5
+            },
+
+            {
+                "name":"Puffer Jacket",
+                "category":["male","tops","new-arrival"],
+                "price":"25$",
+                "image":"imgs/Black Puffer Jacket.png",
+                "rating":4
+            },
+            {
+                "name":"Brown Boots",
+                "category":["female","shoes","new-arrival"],
+                "price":"19.75$",
+                "image":"imgs/Brown Boots.png",
+                "rating":5
+            },
+            {
+                "name":"California Sweatshirt",
+                "category":["Male","tops","new-arrival"],
+                "price":"15$",
+                "image":"imgs/California Sweatshirt.png",
+                "rating":5
+            },
+            {
+                "name":"Cardigan",
+                "category":["female","tops","new-arrival"],
+                "price":"29$",
+                "image":"imgs/Green Cardigan.png",
+                "rating":4
+            },
+            {
+                "name":"Knitted Sweater",
+                "category":["female","tops","new-arrival"],
+                "price":"12$",
+                "image":"imgs/Knit Sweater.png",
+                "rating":5
+            },
+            {
+                "name":"Cotton Sweater",
+                "category":["female","tops","new-arrival"],
+                "price":"15$",
+                "image":"imgs/Pink Sweater.png",
+                "rating":5
+            },
+            {
+                "name":"Uggs",
+                "category":["female","shoes","new-arrival"],
+                "price":"30$",
+                "image":"imgs/uggs.png",
+                "rating":5
+            },
+            {  "name":"High Boots",
+                "category":["female","shoes","new-arrival"],
+                "price":"27$",
+                "image":"imgs/White High Boots.png",
+                "rating":3
             }
         ]
     };
+    
 
     function renderProducts(products) {
         let productContainer = $(".productContainer");
@@ -182,8 +246,17 @@ $(document).ready(function() {
 
         localStorage.setItem("cart", JSON.stringify(cart));
         updateCartCount();
-        showPopupMessage("Item added successfully!"); 
+        showPopupMessage(); 
     });
+
+    function showPopupMessage() {
+        let message = "Successfully added to cart";
+        let popup = $("<div class='popup-message'></div>").text(message);
+        $("body").append(popup);
+        popup.fadeIn(300).delay(2000).fadeOut(300, function () {
+            $(this).remove();
+        });
+    }
     $(document).on('click', '.wishlist-btn', function() {
         let heartIcon = $(this).find('.heart-icon');
         let productId = $(this).data('product-id');

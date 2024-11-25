@@ -70,8 +70,32 @@ $(document).ready(function() {
         } else {
             localStorage.setItem("cart", JSON.stringify([]));
             renderCart();
-            console.log("Proceeding to checkout...");
+            // showThankYouPopup();
             window.location.href = "shop.html";
         }
     });
+    
+    // function showThankYouPopup() {
+    //     let popup = $(`
+    //         <div class='popup-container'>
+    //             <div class='popup-message'>
+    //                 <p>Thank you for purchasing at Chroma!!</p>
+    //                 <button id="goToShop">Go Back to Shop</button>
+    //             </div>
+    //         </div>
+    //     `);
+    //     $("body").append(popup);
+    //     $("#goToShop").click(function () {
+    //         window.location.href = "shop.html";
+    //     });
+
+    //     $(".popup-container").click(function (e) {
+    //         if ($(e.target).is(".popup-container")) {
+    //             $(this).fadeOut(300, function () {
+    //                 $(this).remove();
+    //             });
+    //         }
+    //     });
+    // }
+    
 });
