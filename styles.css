@@ -132,26 +132,6 @@ header{
     display: none;
     z-index: 999;
 }
-#contactBtn{
-    display: flex;
-    right: 10px;
-    bottom: 10px;
-    z-index: 200;
-    position: fixed;
-    border-radius: 50%;
-    border: none;
-    color: #26425A;
-    background-color: #C38EB4;
-}
-#contactBtn:hover{
-    cursor: pointer;
-    background-color: #cf97bf;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-#contactBtn img{
-    height: 50px;
-    width: 50px;
-}
 
 @media screen and (max-width: 768px) {
     .menu-pc {

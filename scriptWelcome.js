@@ -64,13 +64,6 @@ $(document).ready(function () {
         toProductPage();
     });
 
-    function toAboutUsPage() {
-        window.location.href = "aboutUs.html";
-    }
-    aboutUsBtn.addEventListener("click", function () {
-        toAboutUsPage();
-    });
-
     let imgs = ["imgs/sale.jpg", "imgs/newcollection.jpg", "imgs/online shop.jpg"];
     let descriptions = [
         "Why wait for a sale when exclusive deals are right here? For a limited time, shop your favorite items at unbeatable prices—up to 50% off. Whether you’re eyeing that chic new outfit or stocking up on essentials, these offers are too good to pass up. Act fast—once they're gone, they're gone!",

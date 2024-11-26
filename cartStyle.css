@@ -199,7 +199,7 @@ header{
     font-size: smaller;
 }
 
-  #cart-icon:hover{
+#cart-icon:hover{
     color: #86A8CF;
     transform: scale(1.1);
 }
