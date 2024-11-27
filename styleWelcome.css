@@ -178,6 +178,7 @@ marquee{
     align-items: center;
     z-index: 1000;
     border-radius: 10px;
+    font-family: 'Poppins';
 }
 
 .promo-content {
@@ -219,9 +220,9 @@ body.promo-active {
     margin-top: 50px;
     font-family: 'Poppins';
     display: flex;
-    justify-content: space-around;
     width:100%;
     height:auto;
+    background: linear-gradient(180deg, #C38EB4, #1d3041);
 }
 #hero-headers{
     display: flex;
@@ -233,7 +234,7 @@ body.promo-active {
     color:#E1CBD7
 }
 #hero-headers h1{
-    color:#C38EB4;
+    color:#1d3041;
     font-size:xx-large;
 }
 #hero-buttons{
@@ -242,14 +243,14 @@ body.promo-active {
     margin-top: 5px;
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content:start;
 }
 #hero-buttons button{
     font-size:small;
     width:90px;
     height:40px;
     padding:5px;
-    border: 2px solid #E1CBD7;
+    border: none;
     border-radius: 10px;
     background-color: #1d3041;
     color:#E1CBD7;
@@ -262,15 +263,9 @@ body.promo-active {
     border: none;
     cursor: pointer;
 }
-#hero-img img{
-    margin-top: 15px;
-    max-height:40vh;
-    max-width:40vw;
-    border-radius: 15px;
-}
 .chroma{
     font-family:'Poppins';
-    color:#C38EB4;
+    color:#1d3041;
     font-weight: 800;
 }
 #product-details{
@@ -351,12 +346,15 @@ body.promo-active {
     
 }
 #checkNewArrivals{
+    margin-top: 100px;
     width:100%;
     height:600px;
     display: flex;
     flex-direction: column;
     gap:50px;
     align-items: center;
+    box-sizing: border-box;
+    font-family: 'Poppins';
 }
 #headingNewArrivals{
     width:100%;
@@ -364,27 +362,31 @@ body.promo-active {
     border: 2px solid ;
     text-align: center;
     font-size: larger;
-    color:#26425A;
-    background-color:#C38EB4;
+    color:#C38EB4;
+    border: none;
+}
+#headingNewArrivals h6{
+    color: #E1CBD7;
 }
 #newArrivalContainer{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap:50px;
     flex-wrap: wrap;
+    gap:30px;
+    box-sizing: border-box;
 }
 .newArrivalBox{
     height: 400px;
-    width: 250px;
-    padding:5px;
-    background-color:#E1CBD7;
+    max-width: 250px; 
+    min-width: 200px; 
+    padding: 10px;
+    background-color: #E1CBD7;
     border: 5px solid #E1CBD7;
     border-radius: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
-    padding: 10px;
-    flex-wrap: wrap;
 }
+
 .newArrivalBox:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgb(0, 0, 0);
@@ -427,7 +429,8 @@ body.promo-active {
     height:auto;
     font-family: 'Poppins';
     gap:10px;
-    margin-top: 50px;
+    margin-top: 80px;
+    flex-wrap: wrap;
 }
 #details-slider h1 {
     color:#C38EB4;
@@ -450,17 +453,6 @@ body.promo-active {
     flex-direction: column;
     gap:15px;
 }
-#start-shopping{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color:#C38EB4;
-}
-#shopping{
-    color:#E1CBD7;
-    font-weight: 800;
-}
-
 #image img{
     height:100%;
     width:100%;
@@ -510,6 +502,7 @@ body.promo-active {
     #hero-buttons{
         width: 400px;
         height:100px;
+        justify-content: center;
        
     }
     #hero-buttons button{
@@ -517,21 +510,35 @@ body.promo-active {
      width:300px;
     }
 
-    #hero-img img{
-       display: none;
-    }
     #slider-container{
         flex-direction: column;
         text-align: center;
         align-items: center;
-    
     }
     #imgdesc{
         text-align: center;
         align-items: center;
+    
+    }
+    #image{
+        align-items: center;
+    }
+    #checkNewArrivals{
+        height:1000px;
+    }
+    #promo-overlay{
+        width:90%;
+        height:100%;
+        left:30px;
+    }
+}
+@media screen and (max-width: 549px) {
+    #checkNewArrivals{
+        height:1500px;
     }
  
 }
+
 .carousel-container{
     overflow-x: hidden;
     width: 100%;
@@ -566,6 +573,7 @@ body.promo-active {
     background-position: center;
     background-repeat: no-repeat;  
 }
+
 footer{
     margin-top: 10px;
     display:flex;

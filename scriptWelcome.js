@@ -55,7 +55,6 @@ $(document).ready(function () {
 
 
     let shopBtn = document.getElementById("shopBtn");
-    let aboutUsBtn = document.getElementById("aboutUsBtn");
 
     function toProductPage() {
         window.location.href = "shop.html";
@@ -136,25 +135,5 @@ $(document).ready(function () {
     $('.carousel-container').on('mouseup touchend', function () {
         startX = undefined;
     });
-
-    let heroimgs = ["imgs/Modern Clothing Store.jpg", "imgs/StockCake-Fashion store interior_1731771790.jpg"];
-    let heroImg = document.getElementById("heroImg");
-    let currentIndex = 0;
-
-    function updateHeroImage() {
-        currentIndex = (currentIndex + 1) % heroimgs.length;
-        $(heroImg).fadeOut(300, function () {
-            heroImg.src = heroimgs[currentIndex];
-            $(heroImg).fadeIn(300);
-        });
-    }
-
-    function loadInitialImage() {
-        heroImg.src = heroimgs[currentIndex];
-        $(heroImg).hide().fadeIn(300);
-    }
-
-    loadInitialImage();
-    setInterval(updateHeroImage, 5000);
-
+ 
 });
