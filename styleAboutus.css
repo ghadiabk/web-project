@@ -114,7 +114,6 @@ header{
     font-size: medium;
 }
 .menu-pc a:hover{
-    text-decoration: underline;
     color: #86A8CF;
 }
 .sidebar {
@@ -373,6 +372,5 @@ footer{
 }
 .footerinfo a:hover{
     color:#86A8CF;
-    text-decoration: underline;
     cursor: pointer;
 }

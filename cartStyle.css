@@ -304,6 +304,12 @@ header{
         justify-content: center;
         margin-top: 200px;
     }
+    #aboutUsContainer{
+        flex-direction: column;
+     }
+     .AboutUsContainerCLASS{
+         flex-wrap: wrap;
+     }
 }
 footer{
     margin-top: 10px;

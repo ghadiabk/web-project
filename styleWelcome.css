@@ -94,7 +94,6 @@ header{
     font-size: medium;
 }
 .menu-pc a:hover{
-    text-decoration: underline;
     color: #86A8CF;
 }
 .sidebar {
@@ -223,6 +222,7 @@ body.promo-active {
     width:100%;
     height:auto;
     background: linear-gradient(180deg, #C38EB4, #1d3041);
+    justify-content: space-around;
 }
 #hero-headers{
     display: flex;
@@ -262,6 +262,12 @@ body.promo-active {
     background-color:#C38EB4;
     border: none;
     cursor: pointer;
+}
+#hero-img img{
+    margin-top: 15px;
+    max-height:40vh;
+    max-width:40vw;
+    border-radius: 15px;
 }
 .chroma{
     font-family:'Poppins';
@@ -509,7 +515,10 @@ body.promo-active {
      font-size: larger;
      width:300px;
     }
-
+    #details-slider{
+        gap:70px;
+    }
+ 
     #slider-container{
         flex-direction: column;
         text-align: center;
@@ -526,11 +535,19 @@ body.promo-active {
     #checkNewArrivals{
         height:1000px;
     }
+    
     #promo-overlay{
         width:90%;
         height:100%;
         left:30px;
     }
+    #aboutUsContainer{
+        flex-direction: column;
+     }
+     .AboutUsContainerCLASS{
+         flex-wrap: wrap;
+     }
+     
 }
 @media screen and (max-width: 549px) {
     #checkNewArrivals{
@@ -571,7 +588,7 @@ body.promo-active {
     height: 90%; 
     background-size: contain;  
     background-position: center;
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat; 
 }
 
 footer{
@@ -663,6 +680,5 @@ footer{
 }
 .footerinfo a:hover{
     color:#86A8CF;
-    text-decoration: underline;
     cursor: pointer;
 }

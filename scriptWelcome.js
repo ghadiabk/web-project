@@ -135,5 +135,51 @@ $(document).ready(function () {
     $('.carousel-container').on('mouseup touchend', function () {
         startX = undefined;
     });
+
+ function updateCarouselImages() {
+    let images = $('.carousel img');
+    images.each(function () {
+        let img = $(this)[0];
+        if (window.innerWidth <= 768) {
+            let imageName = img.getAttribute('src').split('/').pop().replace('.png', '');
+            let smallImage = `imgs/small${imageName}.png`; 
+    
+            img.srcset = `${smallImage} 475w`;
+        } else {
+            img.srcset = img.getAttribute('src') + " 1920w";
+        }
+    });
+}
+
+
+$(document).ready(function() {
+    updateCarouselImages(); 
+    $(window).resize(function() {
+        updateCarouselImages(); 
+    });
+});
+
  
+
+
+
+    let heroimgs = ["imgs/Modern Clothing Store.jpg", "imgs/StockCake-Fashion store interior_1731771790.jpg"];
+    let heroImg = document.getElementById("heroImg");
+    let currentIndex = 0;
+
+    function updateHeroImage() {
+        currentIndex = (currentIndex + 1) % heroimgs.length;
+        $(heroImg).fadeOut(300, function () {
+            heroImg.src = heroimgs[currentIndex];
+            $(heroImg).fadeIn(300);
+        });
+    }
+
+    function loadInitialImage() {
+        heroImg.src = heroimgs[currentIndex];
+        $(heroImg).hide().fadeIn(300);
+    }
+
+    loadInitialImage();
+    setInterval(updateHeroImage, 5000);
 });
