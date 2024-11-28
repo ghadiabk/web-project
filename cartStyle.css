@@ -148,7 +148,7 @@ body{
     width:100px;
     height:100px;
 }
-input{
+#discount-code{
     background-color: rgba(255, 255, 255, 0.477);
     color: #1d3041;
     border-radius: 10px;
@@ -156,7 +156,7 @@ input{
     width: 160px;
     border: 2px solid #E1CBD7;
 }
-input::placeholder{
+#discount-code::placeholder{
     color: #1d3041;
 }
 
