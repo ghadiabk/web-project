@@ -167,10 +167,11 @@ marquee{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 50px;
-    right: 320px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 60%;
-    height: 70%;
+    height: auto;
     background:#e1cbd7c9;
     display: none;
     justify-content: center;
@@ -536,18 +537,15 @@ body.promo-active {
         height:1000px;
     }
     
-    #promo-overlay{
-        width:90%;
-        height:100%;
-        left:30px;
-    }
     #aboutUsContainer{
         flex-direction: column;
      }
      .AboutUsContainerCLASS{
          flex-wrap: wrap;
      }
-     
+     .carousel-container{
+        max-height: 350px;
+     }
 }
 @media screen and (max-width: 549px) {
     #checkNewArrivals{
@@ -559,7 +557,7 @@ body.promo-active {
 .carousel-container{
     overflow-x: hidden;
     width: 100%;
-    height:400px; 
+    height:350px; 
     margin: 0 auto;
     display: flex;
     justify-content: center;
