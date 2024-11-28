@@ -3,6 +3,7 @@ $(document).ready(function() {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         let cartContainer = $("#check-outItems");
         let total = 0;
+        let discount = parseFloat(localStorage.getItem("discount")) || 0;
         cartContainer.empty();
 
         if (cart.length === 0) {
@@ -24,12 +25,33 @@ $(document).ready(function() {
                 `;
                 cartContainer.append(cartItem);
             });
+            let discountedTotal = (total * (1 - discount)).toFixed(2);
             $("#cart-state").text("");
-            $("#total").text(total.toFixed(2) + "$");
+            $("#total").text(discountedTotal + "$");
         }
     }
 
     renderCart();
+
+    $("#discount-code").on("input", function () {
+        let discountCode = $(this).val().trim();
+        let validCode = "WELCOME25";
+
+        if (discountCode === validCode) {
+            localStorage.setItem("discount", 0.25);
+            showDiscountPopup("Discount applied successfully!");
+        } else {
+            localStorage.removeItem("discount");
+        }
+        renderCart();
+    });
+
+    function showDiscountPopup(message) {
+        const popup = $("#discount-popup");
+        popup.text(message);
+        popup.addClass("show");
+        setTimeout(() => popup.removeClass("show"), 3000);
+    }
 
     $(document).on('click', '.remove-item', function() {
         let productName = $(this).data("product-name");
@@ -69,6 +91,7 @@ $(document).ready(function() {
             alert("Your cart is empty! Add items before proceeding to checkout.");
         } else {
             localStorage.setItem("cart", JSON.stringify([]));
+            localStorage.removeItem("discount");
             renderCart();
             // showThankYouPopup();
             window.location.href = "shop.html";

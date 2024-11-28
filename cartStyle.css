@@ -136,6 +136,7 @@ body{
     height:50px;
     border-radius: 10px;
     transition: 0.3s;
+    margin-right: 5px;
 }
 #check-out button:hover{
     transform: scale(1.1);
@@ -146,8 +147,44 @@ body{
 .popup-container{
     width:100px;
     height:100px;
-    
 }
+input{
+    background-color: rgba(255, 255, 255, 0.477);
+    color: #1d3041;
+    border-radius: 10px;
+    height: 50px;
+    width: 160px;
+    border: 2px solid #E1CBD7;
+}
+input::placeholder{
+    color: #1d3041;
+}
+
+#discount-popup {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #C38EB4;
+    color: #1d3041;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#discount-popup.show {
+    display: block;
+    animation: fadeInOut 3s forwards;
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 header{
     display: flex;
     width: 100%;
