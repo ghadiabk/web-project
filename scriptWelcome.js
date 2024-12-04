@@ -35,23 +35,22 @@ $(document).ready(function () {
         `;
         container.append(newArrivalHTML);
     }
-);
+    );
 
 
-    setTimeout(function() {
-      $('#promo-overlay').fadeIn();
-      $('body').addClass('promo-active');
-    }, 3000);
-  
-    $('#promo-close').on('click', function() {
-      $('#promo-overlay').fadeOut();
-      $('body').removeClass('promo-active'); 
-    });
+    if (!sessionStorage.getItem('promoShown')) {
+        setTimeout(function () {
+          $('#promo-overlay').fadeIn();
+          $('body').addClass('promo-active');
+        }, 3000);
 
+        sessionStorage.setItem('promoShown', 'true');
+      }
 
-
-
-
+      $('#promo-close').on('click', function () {
+        $('#promo-overlay').fadeOut();
+        $('body').removeClass('promo-active');
+      });
 
 
     let shopBtn = document.getElementById("shopBtn");

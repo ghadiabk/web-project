@@ -161,6 +161,7 @@ marquee{
     margin-top: 10px;
     background-color: #C38EB4;
     color: #1d3041;
+    height: 30px;
 }
 #promo-overlay {
     position: fixed;
@@ -232,7 +233,18 @@ body.promo-active {
     gap:20px;
     max-height:40%;
     max-width: 50%;
-    color:#E1CBD7
+    color: #E1CBD7;
+}
+#hero-headers h3, h4{
+    text-shadow:
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
 }
 #hero-headers h1{
     color:#1d3041;
@@ -270,11 +282,6 @@ body.promo-active {
     max-width:40vw;
     border-radius: 15px;
 }
-.chroma{
-    font-family:'Poppins';
-    color:#1d3041;
-    font-weight: 800;
-}
 #product-details{
     display: flex;
     flex-direction: column;
@@ -289,7 +296,6 @@ body.promo-active {
     color:#C38EB4;
     font-size:xx-large;
     font-family: 'Poppins';
-    
 }
 #product-cards{
     display: flex;
@@ -350,7 +356,7 @@ body.promo-active {
     background-color: #26425A;
     border-radius: 10px;
     padding:5px;
-    
+    height: 80px;
 }
 #checkNewArrivals{
     margin-top: 100px;
@@ -406,6 +412,10 @@ body.promo-active {
     display: flex;
     flex-direction: column;
     gap:4px;
+}
+.product-desc #name{
+    font-weight: bold;
+    
 }
 .newArrivalBox img {
     width: 100%;

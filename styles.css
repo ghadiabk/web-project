@@ -182,8 +182,8 @@ main {
 }
 
 .productBox {
-    height: 500px;
-    width: 200px;
+    height: 415px;
+    width: 250px;
     background-color:#E1CBD7;
     border: 5px solid #E1CBD7;
     border-radius: 20px;
@@ -290,7 +290,7 @@ main {
     display: flex;
     justify-content: start;
     gap: 2px;
-    margin: 5px 0;
+    /* margin: 5px 0; */
     width:auto;
 }
 
